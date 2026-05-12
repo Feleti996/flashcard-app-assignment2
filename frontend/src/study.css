@@ -1,0 +1,217 @@
+/* ================================
+   STUDY MODE — THEME COMPATIBLE
+   ================================ */
+
+/* Body styling for Study Mode */
+body.study {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  overflow-x: hidden;
+}
+
+/* Wrapper */
+.study-wrapper {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+/* Title */
+.study-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent) !important;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   PROGRESS BAR + TEXT
+   ================================ */
+
+.study-progress-box {
+  margin-bottom: 25px;
+}
+
+.study-progress-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent) !important;
+}
+
+.study-progress-bar {
+  width: 80%;
+  max-width: 500px;
+  height: 14px;
+  background: var(--card);
+  border-radius: 10px;
+  margin: 15px auto 25px auto;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+}
+
+.study-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* ================================
+   FLIP CARD – 3 DISTINCT COLOURS
+   ================================ */
+
+.study-card {
+  background: var(--card-bg) !important;
+  margin: 25px auto;
+  width: 380px;
+  height: 480px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.study-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.study-card.flipped .study-inner {
+  transform: rotateY(180deg);
+}
+
+.study-face {
+  position: absolute;
+  inset: 0;
+  padding: 25px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  overflow-y: auto;
+}
+
+.study-face.front {
+  background: var(--front) !important;
+  color: var(--text) !important;
+}
+
+.study-face.back {
+  background: var(--back) !important;
+  color: var(--text) !important;
+  transform: rotateY(180deg);
+}
+
+
+
+/* ================================
+   BUTTONS
+   ================================ */
+
+.study-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.study-btn {
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: none;
+  background: var(--accent) !important;
+  color: var(--text) !important;
+}
+
+.study-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+/* ================================
+   SESSION COMPLETE
+   ================================ */
+
+.study-complete {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent) !important;
+}
+.study-card {
+height: 480px !important;
+min-height: 480px !important;
+;
+}
+
+.study-inner {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+.study-face {
+  height: 100% !important;
+  min-height: 100% !important;
+}
+.study-face {
+  overflow-y: auto !important;
+}
+/* ================================
+   FIX: CENTER + RESTORE FLIP
+   ================================ */
+
+/* Center the card */
+.study-card {
+  margin: 25px auto !important;
+  width: 380px;
+  height: 480px !important;
+  min-height: 480px !important;
+  position: relative;
+  perspective: 1000px;
+}
+
+/* Restore flip animation */
+.study-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d !important;
+  transition: transform 0.6s ease !important;
+}
+
+/* When flipped */
+.study-card.flipped .study-inner {
+  transform: rotateY(180deg) !important;
+}
+
+/* Ensure faces fill the card */
+.study-face {
+  position: absolute;
+  inset: 0;
+  height: 100% !important;
+  min-height: 100% !important;
+  backface-visibility: hidden !important;
+  overflow-y: auto !important;
+}
+
+/* Front */
+.study-face.front {
+  transform: rotateY(0deg);
+}
+
+/* Back */
+.study-face.back {
+  transform: rotateY(180deg);
+}
+.study-face.front,
+.study-face.back {
+  color: var(--text) !important;
+}

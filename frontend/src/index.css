@@ -1,0 +1,98 @@
+/* BASE PALETTE */
+:root {
+  --pink: #F45B69;
+  --blush: #F6E8EA;
+  --coffee: #22181C;
+  --cherry: #5A0001;
+  --cinnabar: #F13030;
+}
+
+/* THEME 1 — Light Mode */
+.theme1 {
+  --bg: var(--blush);
+  --card: var(--pink);
+  --text: var(--coffee);
+  --accent: var(--cinnabar);
+}
+
+/* THEME 2 — Dark Mode */
+.theme2 {
+  --bg: var(--coffee);
+  --card: #3a2a2e;
+  --text: var(--blush);
+  --accent: var(--pink);
+}
+
+/* THEME 3 — High Contrast */
+.theme3 {
+  --bg: var(--pink);
+  --card: var(--cinnabar);
+  --text: var(--blush);
+  --accent: var(--cherry);
+}
+
+/* GLOBAL APPLY */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* COMPONENTS */
+.card,
+.history-card,
+.admin-card {
+  background: var(--card);
+  color: var(--text);
+}
+
+button {
+  background: var(--accent);
+  color: white;
+}
+.theme1 {
+  --front: var(--pink);
+  --back: var(--cinnabar);
+  --card-bg: var(--blush);
+   --front: #F45B69;     /* pink */
+  --back: #F13030;      /* cinnabar */
+  --card-bg: #22181C;   /* coffee (dark) */ 
+}
+.theme2 {
+  --front: #3a2a2e;
+  --back: var(--pink);
+  --card-bg: var(--coffee);
+  --front: #5A0001;      /* cherry */
+  --back: #F13030;       /* cinnabar */
+  --card-bg: #3A2A2E;    /* medium dark — visible against page */
+}
+.theme3 {
+  --front: var(--cherry);
+  --back: var(--cinnabar);
+  --card-bg: var(--pink);
+  --front: #F45B69;     /* strong pink — NOT white */
+  --back: #F13030;      /* cinnabar */
+  --card-bg: #22181C;   /* dark coffee — contrasts with page */
+}
+
+
+
+
+

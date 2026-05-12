@@ -1,0 +1,126 @@
+/* ================================
+   HOME PAGE — PROFESSIONAL UI
+   ================================ */
+
+
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--coffee);
+  color: var(--blush);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+    background: var(--bg) !important;
+      color: var(--text) !important;
+        
+}
+
+/* Main Title */
+.home-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: var(--pink);
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Subtitle */
+.home-subtitle {
+  font-size: 20px;
+  max-width: 700px;
+  color: var(--blush);
+  opacity: 0.9;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+/* Buttons container */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Base button */
+.home-btn {
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: none;
+}
+
+/* Primary button */
+.home-btn.primary {
+  background: var(--pink);
+  color: var(--coffee);
+}
+
+.home-btn.primary:hover {
+  background: var(--cinnabar);
+  color: var(--blush);
+  transform: scale(1.05);
+}
+
+/* Secondary button */
+.home-btn.secondary {
+  background: var(--blush);
+  color: var(--coffee);
+}
+
+.home-btn.secondary:hover {
+  background: var(--pink);
+  color: var(--coffee);
+  transform: scale(1.05);
+}
+
+/* Feature cards section */
+.home-features {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Feature card */
+.feature-card {
+  background: var(--cherry);
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  padding: 25px;
+  color: var(--blush);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  border-color: var(--cinnabar);
+}
+
+/* Feature title */
+.feature-card h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--pink);
+  margin-bottom: 12px;
+}
+
+/* Feature text */
+.feature-card p {
+  font-size: 15px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+.home-subtitle {
+  color: var(--text) !important;
+}

@@ -1,0 +1,231 @@
+/* ============================================================
+   GLOBAL THEME — FLASHCARD APP
+   Uses your palette:
+   --pink:     #F45B69
+   --blush:    #F6E8EA
+   --coffee:   #22181C
+   --cherry:   #5A0001
+   --cinnabar: #F13030
+============================================================ */
+
+/* ------------------------------------------------------------
+   1. ROOT VARIABLES (COLOUR SYSTEM)
+------------------------------------------------------------ */
+:root {
+  --pink: #F45B69;
+  --blush: #F6E8EA;
+  --coffee: #22181C;
+  --cherry: #5A0001;
+  --cinnabar: #F13030;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.15);
+  --shadow-md: 0 6px 14px rgba(0,0,0,0.18);
+  --shadow-lg: 0 10px 24px rgba(0,0,0,0.22);
+
+  --transition: 0.25s ease;
+}
+
+/* ------------------------------------------------------------
+   2. GLOBAL RESET
+------------------------------------------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--blush);
+  color: var(--coffee);
+  font-family: Arial, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ------------------------------------------------------------
+   3. GLOBAL BUTTON SYSTEM
+------------------------------------------------------------ */
+.btn {
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+/* Primary (pink) */
+.btn-primary {
+  background: var(--pink);
+  color: white;
+}
+.btn-primary:hover {
+  background: var(--cinnabar);
+  color: var(--coffee);
+}
+
+/* Danger (red) */
+.btn-danger {
+  background: var(--cinnabar);
+  color: var(--coffee);
+}
+.btn-danger:hover {
+  background: var(--cherry);
+  color: var(--blush);
+}
+
+/* Dark */
+.btn-dark {
+  background: var(--coffee);
+  color: var(--blush);
+}
+.btn-dark:hover {
+  background: var(--pink);
+  color: var(--coffee);
+}
+
+/* Light */
+.btn-light {
+  background: var(--blush);
+  color: var(--coffee);
+}
+.btn-light:hover {
+  background: var(--pink);
+  color: var(--coffee);
+}
+
+/* ------------------------------------------------------------
+   4. INPUT SYSTEM
+------------------------------------------------------------ */
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--pink);
+  background: var(--blush);
+  color: var(--coffee);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--cinnabar);
+  outline: none;
+}
+
+/* ------------------------------------------------------------
+   5. CARD SYSTEM (Flashcards, Admin rows, Study cards)
+------------------------------------------------------------ */
+.card {
+  background: var(--blush);
+  border: 2px solid var(--pink);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ------------------------------------------------------------
+   6. NAVBAR SYSTEM
+------------------------------------------------------------ */
+.navbar {
+  background: var(--cherry);
+  color: var(--blush);
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--blush);
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--cinnabar);
+}
+
+.nav-btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--pink);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.nav-btn:hover {
+  opacity: 0.85;
+}
+
+.nav-btn.logout {
+  background: var(--blush);
+  color: var(--coffee);
+}
+.nav-btn.logout:hover {
+  background: var(--cinnabar);
+  color: var(--blush);
+}
+
+/* ------------------------------------------------------------
+   7. STUDY MODE OVERRIDES
+------------------------------------------------------------ */
+body.study {
+  background: var(--coffee) !important;
+  color: var(--blush) !important;
+}
+
+body.study .card {
+  background: var(--cherry) !important;
+  color: var(--blush) !important;
+}
+
+body.study .btn-primary {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+}
+
+body.study .btn-danger {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+}
+
+/* ------------------------------------------------------------
+   8. DARK MODE OVERRIDES
+------------------------------------------------------------ */
+body.dark {
+  background: var(--coffee);
+  color: var(--blush);
+}
+
+body.dark .card {
+  background: var(--coffee);
+  border-color: var(--pink);
+  color: var(--blush);
+}
+
+body.dark input {
+  background: var(--coffee);
+  color: var(--blush);
+  border-color: var(--pink);
+}
+
+/* ------------------------------------------------------------
+   9. UTILITY CLASSES
+------------------------------------------------------------ */
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }

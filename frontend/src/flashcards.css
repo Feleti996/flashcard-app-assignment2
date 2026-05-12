@@ -1,0 +1,291 @@
+/* ================================
+   FLASHCARDS PAGE — LAYOUT + GRID
+   ================================ */
+
+.flashcards-page {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  color: var(--blush);
+}
+
+.flashcards-page h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--pink);
+  margin-bottom: 25px;
+}
+
+/* Flashcards Grid */
+.flashcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ================================
+   FLASHCARD CARD UI
+   ================================ */
+
+.flashcard {
+  background: var(--cherry);
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  padding: 20px;
+  color: var(--blush);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  transition: 0.25s ease;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.flashcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  border-color: var(--cinnabar);
+}
+
+.flashcard .question {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--pink);
+}
+
+.flashcard .answer {
+  font-size: 16px;
+  color: var(--blush);
+  margin-bottom: 12px;
+}
+
+/* Buttons inside card */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.25s ease;
+}
+
+.actions .edit {
+  background: var(--pink);
+  color: var(--coffee);
+}
+
+.actions .edit:hover {
+  background: var(--cinnabar);
+  color: var(--blush);
+}
+
+.actions .delete {
+  background: var(--cinnabar);
+  color: var(--blush);
+}
+
+.actions .delete:hover {
+  background: var(--pink);
+  color: var(--coffee);
+}
+
+/* ================================
+   FLASHCARD FORM — PREMIUM UI
+   ================================ */
+
+.flashcard-form-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: var(--cherry);
+  border-radius: 14px;
+  border: 3px solid var(--pink);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  color: var(--blush);
+}
+
+.flashcard-form-container h2 {
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--blush);
+  letter-spacing: 1px;
+}
+
+.flashcard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.flashcard-form input,
+.flashcard-form textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid var(--pink);
+  background: var(--coffee);
+  color: var(--blush);
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.flashcard-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.flashcard-form input::placeholder,
+.flashcard-form textarea::placeholder {
+  color: var(--blush);
+  opacity: 0.7;
+}
+
+.flashcard-form input:focus,
+.flashcard-form textarea:focus {
+  outline: none;
+  border-color: var(--cinnabar);
+  background: var(--cherry);
+}
+
+.flashcard-submit {
+  padding: 14px;
+  background: var(--pink);
+  color: var(--coffee);
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  margin-top: 10px;
+}
+
+.flashcard-submit:hover {
+  background: var(--cinnabar);
+  color: var(--blush);
+  transform: scale(1.03);
+}
+
+.flashcard-error {
+  background: var(--cinnabar);
+  color: var(--blush);
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid var(--pink);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ================================
+   EMPTY STATE
+   ================================ */
+
+.flashcards-empty {
+  text-align: center;
+  padding: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--pink);
+  background: var(--blush);
+  border: 2px solid var(--pink);
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  margin-top: 20px;
+}
+
+/* ================================
+   ADD FLASHCARD — THEMED INPUTS
+   ================================ */
+
+.add-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+}
+
+body.dark .add-box {
+  background: rgba(0,0,0,0.25);
+  border-color: var(--blush);
+}
+
+/* Textareas */
+.add-box .input-box {
+  width: 260px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid var(--pink);
+  background: var(--blush);
+  color: var(--coffee);
+  font-size: 15px;
+  resize: none;
+  transition: 0.25s ease;
+}
+
+body.dark .add-box .input-box {
+  background: var(--coffee);
+  color: var(--blush);
+  border-color: var(--pink);
+}
+
+.add-box .input-box::placeholder {
+  color: var(--coffee);
+  opacity: 0.6;
+}
+
+body.dark .add-box .input-box::placeholder {
+  color: var(--blush);
+  opacity: 0.6;
+}
+
+.add-box .input-box:focus {
+  outline: none;
+  border-color: var(--cinnabar);
+  background: var(--cherry);
+  color: var(--blush);
+}
+
+/* Add Button */
+.add-btn {
+  padding: 16px 32px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 800;
+  background: var(--pink);
+  color: var(--coffee);
+  transition: 0.25s ease;
+  height: fit-content;
+}
+
+.add-btn:hover {
+  background: var(--cinnabar);
+  color: var(--blush);
+  transform: translateY(-2px);
+}
+.flashcards-page h2 {
+  color: var(--text) !important;
+}
+.add-box,
+.add-button,
+.add-card {
+  background: var(--card) !important;
+  color: var(--text) !important;
+  border: 2px solid var(--accent) !important;
+}
