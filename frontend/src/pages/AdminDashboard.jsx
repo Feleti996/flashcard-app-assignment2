@@ -83,9 +83,19 @@ setHistory(
     c.question?.toLowerCase().includes(search.toLowerCase())
   );
 
-  const filteredHistory = history.filter((h) =>
-    h.flashcardId?.question?.toLowerCase().includes(search.toLowerCase())
-  );
+const filteredHistory = history.filter((h) => {
+  // ⭐ Show ALL history when search is empty
+  if (!search.trim()) return true;
+
+  const q = h.flashcardId?.question?.toLowerCase() || "";
+  const a = h.flashcardId?.answer?.toLowerCase() || "";
+  const u = h.userId?.email?.toLowerCase() || "";
+
+  const s = search.toLowerCase();
+
+  return q.includes(s) || a.includes(s) || u.includes(s);
+});
+
   const openUserDetails = (user) => {
   setSelectedUser(user);
   };
@@ -112,29 +122,31 @@ setHistory(
         </div>
       </div>
 
-      {/* Tabs */}
-      <div className="admin-tabs">
-        <button
-          className={tab === "users" ? "active" : ""}
-          onClick={() => setTab("users")}
-        >
-          Users
-        </button>
+{/* Tabs */}
+<div className="admin-nav">
+  <button
+    className={tab === "users" ? "active" : ""}
+    onClick={() => { setTab("users"); setSearch(""); }}
+  >
+    Users
+  </button>
 
-        <button
-          className={tab === "flashcards" ? "active" : ""}
-          onClick={() => setTab("flashcards")}
-        >
-          Flashcards
-        </button>
+  <button
+    className={tab === "flashcards" ? "active" : ""}
+    onClick={() => { setTab("flashcards"); setSearch(""); }}
+  >
+    Flashcards
+  </button>
 
-        <button
-          className={tab === "history" ? "active" : ""}
-          onClick={() => setTab("history")}
-        >
-          History
-        </button>
-      </div>
+  <button
+    className={tab === "history" ? "active" : ""}
+    onClick={() => { setTab("history"); setSearch(""); }}
+  >
+    History
+  </button>
+</div>
+
+
 
       {/* Search */}
       <input

@@ -103,8 +103,12 @@ setFlashcards((prev) => [newCard, ...prev]);
       {loading && <p className="flashcards-empty">Loading flashcards...</p>}
 
       {!loading && flashcards.length === 0 && (
-        <p className="flashcards-empty">No flashcards yet. Add your first one!</p>
-      )}
+  <div className="empty-state">
+    <img src="/pen.png" alt="pen" className="pen-icon" />
+    <p>No flashcards yet. Add your first one!</p>
+  </div>
+)}
+
 
       <div className="flashcards-grid">
 {flashcards
