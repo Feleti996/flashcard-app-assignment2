@@ -124,3 +124,15 @@
 .home-subtitle {
   color: var(--text) !important;
 }
+.history-card,
+.study-history-item,
+.history-item {
+  background: var(--blush) !important;     /* soft + classic */
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;                     /* classic rounded frame */
+  padding: 22px 26px;
+  margin-bottom: 22px;
+  color: var(--coffee) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* premium soft shadow */
+  transition: 0.25s ease;
+}

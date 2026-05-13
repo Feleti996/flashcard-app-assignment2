@@ -289,3 +289,77 @@ body.dark .add-box .input-box::placeholder {
   color: var(--text) !important;
   border: 2px solid var(--accent) !important;
 }
+/* ================================
+   CLASSIC FLASHCARD BOX
+   ================================ */
+
+.flashcard {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  padding: 22px;
+  color: var(--coffee) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+}
+
+.flashcard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  border-color: var(--cinnabar) !important;
+}
+
+/* Question */
+.flashcard .question {
+  font-weight: bold;
+  color: var(--pink) !important;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Answer */
+.flashcard .answer {
+  color: var(--coffee) !important;
+  font-size: 16px;
+}
+
+/* Buttons */
+.actions button {
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: bold;
+}
+
+.actions .edit {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+}
+
+.actions .delete {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+}
+.flashcard-form-container {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: var(--coffee) !important;
+}
+
+.flashcard-form input,
+.flashcard-form textarea {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  color: var(--coffee) !important;
+}
+.flashcard,
+.flashcard * {
+  color: var(--coffee) !important;
+}
+.flashcard-form-container,
+.flashcard-form-container * {
+  color: var(--coffee) !important;
+}
+

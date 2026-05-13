@@ -11,9 +11,10 @@ import { AuthContext } from "../context/AuthContext";
 import "../flashcards.css";
 
 function Flashcards() {
-  const { token } = useContext(AuthContext);   // ⭐ TOKEN FIX
+  const { token } = useContext(AuthContext);   
   const [flashcards, setFlashcards] = useState([]);
   const [loading, setLoading] = useState(true);
+const [searchTerm, setSearchTerm] = useState("");
 
 const loadFlashcards = async () => {
   try {
@@ -43,7 +44,7 @@ useEffect(() => {
 
  const addCard = async (card) => {
     try {
-      const newCard = await createFlashcard(card, token);   // ⭐ TOKEN FIX
+      const newCard = await createFlashcard(card, token);   
 
       if (newCard && typeof newCard === "object") {
 setFlashcards((prev) => [newCard, ...prev]);
@@ -55,7 +56,7 @@ setFlashcards((prev) => [newCard, ...prev]);
 
   const removeCard = async (id) => {
     try {
-      await deleteFlashcard(id, token);   // ⭐ TOKEN FIX
+      await deleteFlashcard(id, token);  
       setFlashcards((prev) => prev.filter((c) => c._id !== id));
     } catch (err) {
       console.error("Error deleting flashcard:", err);
@@ -64,7 +65,7 @@ setFlashcards((prev) => [newCard, ...prev]);
 
   const editCard = async (id, updated) => {
     try {
-      const updatedCard = await updateFlashcard(id, updated, token);   // ⭐ TOKEN FIX
+      const updatedCard = await updateFlashcard(id, updated, token);
 
       if (updatedCard) {
         setFlashcards((prev) =>
@@ -81,6 +82,23 @@ setFlashcards((prev) => [newCard, ...prev]);
       <h2>My Flashcards</h2>
 
       <AddForm addCard={addCard} />
+      <input
+  type="text"
+  placeholder="Search flashcards..."
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  className="search-input"
+  style={{
+    width: "100%",
+    padding: "10px",
+    marginTop: "15px",
+    marginBottom: "20px",
+    borderRadius: "8px",
+    border: "1px solid #ccc",
+    fontSize: "16px"
+  }}
+/>
+
 
       {loading && <p className="flashcards-empty">Loading flashcards...</p>}
 
@@ -89,7 +107,18 @@ setFlashcards((prev) => [newCard, ...prev]);
       )}
 
       <div className="flashcards-grid">
-        {flashcards.map((card) => (
+{flashcards
+  .filter((card) => {
+    const q = card.question?.toLowerCase() || "";
+    const a = card.answer?.toLowerCase() || "";
+    const cat = card.category?.toLowerCase() || "";
+    const s = searchTerm.toLowerCase();
+
+    return q.includes(s) || a.includes(s) || cat.includes(s);
+  })
+  .map((card) => (
+
+
           <div key={card._id} className="flashcard">
             <div className="question">{card.question}</div>
             <div className="answer">{card.answer}</div>

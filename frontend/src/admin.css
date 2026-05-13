@@ -251,4 +251,186 @@
 .admin-page h2 {
   color: var(--text) !important;
 }
+.clickable-row {
+  cursor: pointer;
+}
+.clickable-row:hover {
+  background: rgba(255,255,255,0.1);
+}
+/* Stats cards */
+.stat-card {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  padding: 20px;
+  color: var(--coffee) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Tables */
+.admin-table {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.admin-table th {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+  padding: 12px;
+}
+
+.admin-table td {
+  padding: 12px;
+  color: var(--coffee) !important;
+  border-bottom: 1px solid var(--pink);
+}
+
+.admin-table tr:hover {
+  background: rgba(0,0,0,0.05);
+}
+.modal-box {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  padding: 26px;
+  color: var(--coffee) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+.admin-table,
+.admin-table * {
+  color: var(--coffee) !important;
+}
+
+.stat-card,
+.stat-card * {
+  color: var(--coffee) !important;
+}
+.stat-card {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  color: var(--coffee) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+  border-color: var(--cinnabar) !important;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.admin-table th {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+  padding: 14px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.admin-table td {
+  padding: 14px;
+  color: var(--coffee) !important;
+  border-bottom: 1px solid var(--pink);
+  font-size: 15px;
+}
+
+.admin-table tr:hover {
+  background: rgba(0,0,0,0.05);
+}
+.clickable-row {
+  cursor: pointer;
+}
+
+.clickable-row:hover {
+  background: rgba(0,0,0,0.08);
+}
+.edit-btn,
+.delete-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: none;
+}
+
+/* Edit */
+.edit-btn {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+}
+
+.edit-btn:hover {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+}
+
+/* Delete */
+.delete-btn {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+}
+
+.delete-btn:hover {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+}
+.modal-box {
+  background: var(--blush) !important;
+  border: 2px solid var(--pink) !important;
+  border-radius: 16px;
+  padding: 26px;
+  color: var(--coffee) !important;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.modal-actions button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+/* Cancel */
+.modal-cancel {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+}
+
+.modal-cancel:hover {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+}
+
+/* Delete */
+.modal-delete {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+}
+
+.modal-delete:hover {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+}
+.admin-table *,
+.stat-card *,
+.modal-box * {
+  color: var(--coffee) !important;
+}
 

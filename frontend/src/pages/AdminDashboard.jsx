@@ -9,6 +9,7 @@ import {
 } from "../services/adminService";
 import "../admin.css";
 import { AuthContext } from "../context/AuthContext";
+import { createFlashcard } from "../services/flashcardService";
 
 function AdminDashboard() {
   const { token } = useContext(AuthContext);
@@ -22,6 +23,7 @@ function AdminDashboard() {
   const [showModal, setShowModal] = useState(false);
   const [deleteType, setDeleteType] = useState(null);
   const [deleteId, setDeleteId] = useState(null);
+  const [selectedUser, setSelectedUser] = useState(null);
 
   // Load admin data with token
   const loadData = useCallback(async () => {
@@ -84,6 +86,9 @@ setHistory(
   const filteredHistory = history.filter((h) =>
     h.flashcardId?.question?.toLowerCase().includes(search.toLowerCase())
   );
+  const openUserDetails = (user) => {
+  setSelectedUser(user);
+  };
 
   return (
     <div className="admin-wrapper">
@@ -149,16 +154,19 @@ setHistory(
                 <th>Email</th>
                 <th>Role</th>
                 <th>Created</th>
-                <th>Delete</th>
+                
+              <th>Delete</th>
+
               </tr>
             </thead>
             <tbody>
              {filteredUsers.map((u) => (
-  <tr key={u._id}>
+  <tr key={u._id} onClick={() => openUserDetails(u)} className="clickable-row">
+
     <td>{u.email}</td>
     <td>{u.role}</td>
-    <td>{new Date(u.createdAt).toLocaleString()}</td>
-    <td>
+    <td>{u.createdAt ? new Date(u.createdAt).toLocaleString() : "Unknown"}</td>
+<td>
       <button
         className="delete-btn"
         onClick={() => openDeleteModal("user", u._id)}
@@ -166,6 +174,8 @@ setHistory(
         Delete
       </button>
     </td>
+
+
   </tr>
 ))}
 
@@ -173,37 +183,80 @@ setHistory(
           </table>
         )}
 
-        {tab === "flashcards" && (
-          <table className="admin-table">
-            <thead>
-              <tr>
-                <th>Question</th>
-                <th>Answer</th>
-                <th>Category</th>
-                <th>Owner</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredFlashcards.map((c) => (
-                <tr key={c._id}>
-                  <td>{c.question}</td>
-                  <td>{c.answer}</td>
-                  <td>{c.category}</td>
-                  <td>{c.createdBy?.email || "Unknown"}</td>
-                  <td>
-                    <button
-                      className="delete-btn"
-                      onClick={() => openDeleteModal("flashcard", c._id)}
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+{tab === "flashcards" && (
+  <table className="admin-table">
+    <thead>
+      <tr>
+        <th>Question</th>
+        <th>Answer</th>
+        <th>Category</th>
+        <th>Owner</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {filteredFlashcards.map((c) => (
+        <tr key={c._id}>
+          <td>{c.question}</td>
+          <td>{c.answer}</td>
+          <td>{c.category}</td>
+          <td>{c.createdBy?.email || "Unknown"}</td>
+
+          {/* ⭐ EDIT BUTTON FIX */}
+          <td>
+            <button
+              className="edit-btn"
+              onClick={async () => {
+                const newQuestion = prompt("New question:", c.question);
+                const newAnswer = prompt("New answer:", c.answer);
+                const newCategory = prompt("New category:", c.category);
+
+                // Stop if cancelled
+                if (
+                  newQuestion === null ||
+                  newAnswer === null ||
+                  newCategory === null
+                ) {
+                  return;
+                }
+
+                // ⭐ Prevent undefined fields
+                const updated = {
+                  question: newQuestion.trim() || c.question,
+                  answer: newAnswer.trim() || c.answer,
+                  category: newCategory.trim() || c.category,
+
+                  // ⭐ Preserve createdBy so Flashcards page doesn't crash
+                  createdBy: c.createdBy?._id || c.createdBy || null
+                };
+
+                if (window.confirm("Save changes?")) {
+                  await deleteFlashcardAdmin(c._id, token);
+                  await createFlashcard(updated, token);
+                  loadData();
+                }
+              }}
+            >
+              Edit
+            </button>
+          </td>
+
+          {/* DELETE BUTTON */}
+          <td>
+            <button
+              className="delete-btn"
+              onClick={() => openDeleteModal("flashcard", c._id)}
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+)}
+
 
 {tab === "history" && (
   <table className="admin-table">
@@ -267,6 +320,30 @@ setHistory(
           </div>
         </div>
       )}
+      {selectedUser && (
+  <div className="modal-overlay">
+    <div className="modal-box">
+      <h3>User Details</h3>
+
+      <p><strong>Email:</strong> {selectedUser.email}</p>
+      <p><strong>Role:</strong> {selectedUser.role}</p>
+      <p><strong>Created:</strong> {selectedUser.createdAt ? new Date(selectedUser.createdAt).toLocaleString() : "Unknown"}</p>
+
+      <p><strong>Total Flashcards:</strong> {
+        flashcards.filter(f => f.createdBy?._id === selectedUser._id).length
+      }</p>
+
+      <p><strong>Total Study Records:</strong> {
+        history.filter(h => h.userId?._id === selectedUser._id).length
+      }</p>
+
+      <button className="modal-cancel" onClick={() => setSelectedUser(null)}>
+        Close
+      </button>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }
