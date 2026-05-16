@@ -229,3 +229,9 @@ body.dark input {
 .text-center { text-align: center; }
 .mt-20 { margin-top: 20px; }
 .mb-20 { margin-bottom: 20px; }
+.theme-light {
+  --front: #F45B69;
+  --back: #F13030;
+  --card-bg: #F6E8EA;
+  --text: #22181C;
+}
