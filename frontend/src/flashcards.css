@@ -7,14 +7,14 @@
   max-width: 1100px;
   margin: 40px auto;
   padding: 20px;
-  color: var(--blush);
+  color: var(--text);
 }
 
 .flashcards-page h2 {
   text-align: center;
   font-size: 32px;
   font-weight: 800;
-  color: var(--pink);
+  color: var(--text);
   margin-bottom: 25px;
 }
 
@@ -30,37 +30,38 @@
    ================================ */
 
 .flashcard {
-  background: var(--cherry);
+  background: var(--blush);
   border: 2px solid var(--pink);
-  border-radius: 12px;
-  padding: 20px;
-  color: var(--blush);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  border-radius: 16px;
+  padding: 22px;
+  color: var(--coffee);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: 0.25s ease;
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
 
 .flashcard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
   border-color: var(--cinnabar);
 }
 
+/* Question */
 .flashcard .question {
   font-weight: bold;
+  color: var(--pink);
   font-size: 18px;
   margin-bottom: 10px;
-  color: var(--pink);
 }
 
+/* Answer */
 .flashcard .answer {
+  color: var(--coffee);
   font-size: 16px;
-  color: var(--blush);
-  margin-bottom: 12px;
 }
 
-/* Buttons inside card */
+/* Buttons */
 .actions {
   display: flex;
   justify-content: space-between;
@@ -69,8 +70,8 @@
 
 .actions button {
   padding: 8px 14px;
-  border: none;
   border-radius: 8px;
+  border: none;
   cursor: pointer;
   font-weight: bold;
   transition: 0.25s ease;
@@ -104,12 +105,12 @@
   width: 90%;
   max-width: 700px;
   margin: 40px auto;
-  padding: 25px;
-  background: var(--cherry);
-  border-radius: 14px;
-  border: 3px solid var(--pink);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-  color: var(--blush);
+  padding: 26px;
+  background: var(--blush);
+  border: 2px solid var(--pink);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: var(--coffee);
 }
 
 .flashcard-form-container h2 {
@@ -117,8 +118,7 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 20px;
-  color: var(--blush);
-  letter-spacing: 1px;
+  color: var(--coffee);
 }
 
 .flashcard-form {
@@ -133,8 +133,8 @@
   padding: 14px;
   border-radius: 10px;
   border: 2px solid var(--pink);
-  background: var(--coffee);
-  color: var(--blush);
+  background: var(--blush);
+  color: var(--coffee);
   font-size: 16px;
   transition: 0.25s ease;
 }
@@ -144,17 +144,12 @@
   resize: vertical;
 }
 
-.flashcard-form input::placeholder,
-.flashcard-form textarea::placeholder {
-  color: var(--blush);
-  opacity: 0.7;
-}
-
 .flashcard-form input:focus,
 .flashcard-form textarea:focus {
   outline: none;
   border-color: var(--cinnabar);
   background: var(--cherry);
+  color: var(--blush);
 }
 
 .flashcard-submit {
@@ -176,237 +171,10 @@
   transform: scale(1.03);
 }
 
-.flashcard-error {
-  background: var(--cinnabar);
-  color: var(--blush);
-  padding: 10px;
-  border-radius: 8px;
-  border: 2px solid var(--pink);
-  font-weight: bold;
-  text-align: center;
-}
-
 /* ================================
    EMPTY STATE
    ================================ */
 
-.flashcards-empty {
-  text-align: center;
-  padding: 25px;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--pink);
-  background: var(--blush);
-  border: 2px solid var(--pink);
-  border-radius: 12px;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-  margin-top: 20px;
-}
-
-/* ================================
-   ADD FLASHCARD — THEMED INPUTS
-   ================================ */
-
-.add-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 30px;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  border: 2px solid var(--pink);
-  border-radius: 14px;
-}
-
-body.dark .add-box {
-  background: rgba(0,0,0,0.25);
-  border-color: var(--blush);
-}
-
-/* Textareas */
-.add-box .input-box {
-  width: 260px;
-  padding: 12px;
-  border-radius: 10px;
-  border: 2px solid var(--pink);
-  background: var(--blush);
-  color: var(--coffee);
-  font-size: 15px;
-  resize: none;
-  transition: 0.25s ease;
-}
-
-body.dark .add-box .input-box {
-  background: var(--coffee);
-  color: var(--blush);
-  border-color: var(--pink);
-}
-
-.add-box .input-box::placeholder {
-  color: var(--coffee);
-  opacity: 0.6;
-}
-
-body.dark .add-box .input-box::placeholder {
-  color: var(--blush);
-  opacity: 0.6;
-}
-
-.add-box .input-box:focus {
-  outline: none;
-  border-color: var(--cinnabar);
-  background: var(--cherry);
-  color: var(--blush);
-}
-
-/* Add Button */
-.add-btn {
-  padding: 16px 32px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 800;
-  background: var(--pink);
-  color: var(--coffee);
-  transition: 0.25s ease;
-  height: fit-content;
-}
-
-.add-btn:hover {
-  background: var(--cinnabar);
-  color: var(--blush);
-  transform: translateY(-2px);
-}
-.flashcards-page h2 {
-  color: var(--text) !important;
-}
-.add-box,
-.add-button,
-.add-card {
-  background: var(--card) !important;
-  color: var(--text) !important;
-  border: 2px solid var(--accent) !important;
-}
-/* ================================
-   CLASSIC FLASHCARD BOX
-   ================================ */
-
-.flashcard {
-  background: var(--blush) !important;
-  border: 2px solid var(--pink) !important;
-  border-radius: 16px;
-  padding: 22px;
-  color: var(--coffee) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: 0.25s ease;
-}
-
-.flashcard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
-  border-color: var(--cinnabar) !important;
-}
-
-/* Question */
-.flashcard .question {
-  font-weight: bold;
-  color: var(--pink) !important;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* Answer */
-.flashcard .answer {
-  color: var(--coffee) !important;
-  font-size: 16px;
-}
-
-/* Buttons */
-.actions button {
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-weight: bold;
-}
-
-.actions .edit {
-  background: var(--pink) !important;
-  color: var(--coffee) !important;
-}
-
-.actions .delete {
-  background: var(--cinnabar) !important;
-  color: var(--blush) !important;
-}
-.flashcard-form-container {
-  background: var(--blush) !important;
-  border: 2px solid var(--pink) !important;
-  border-radius: 16px;
-  padding: 26px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  color: var(--coffee) !important;
-}
-
-.flashcard-form input,
-.flashcard-form textarea {
-  background: var(--blush) !important;
-  border: 2px solid var(--pink) !important;
-  color: var(--coffee) !important;
-}
-.flashcard,
-.flashcard * {
-  color: var(--coffee) !important;
-}
-.flashcard-form-container,
-.flashcard-form-container * {
-  color: var(--coffee) !important;
-}
-.empty-state {
-  background: var(--blush);
-  border: 2px solid var(--pink);
-  border-radius: 16px;
-  padding: 40px 20px;
-  text-align: center;
-  color: var(--coffee);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin-top: 20px;
-}
-
-.empty-state p {
-  font-size: 18px;
-  margin-top: 12px;
-  color: var(--coffee);
-}
-
-.pen-icon {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 2px rgba(0,0,0,0.25));
-}
-.search-input {
-  background: var(--blush);
-  border: 2px solid var(--pink);
-  border-radius: 14px;
-  padding: 12px 16px;
-  font-size: 16px;
-  color: var(--coffee);
-  width: 100%;
-  outline: none;
-  transition: 0.25s ease;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-}
-
-.search-input::placeholder {
-  color: var(--coffee);
-  opacity: 0.6;
-}
-
-.search-input:focus {
-  border-color: var(--cinnabar);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
-}
 .empty-state {
   background: var(--blush);
   border: 2px solid var(--pink);
@@ -434,8 +202,32 @@ body.dark .add-box .input-box::placeholder {
   opacity: 0.95;
 }
 
+/* ================================
+   SEARCH BAR
+   ================================ */
+
+.search-input {
+  background: var(--blush);
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: var(--coffee);
+  width: 100%;
+  outline: none;
+  transition: 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+.search-input:focus {
+  border-color: var(--cinnabar);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
