@@ -1,120 +1,220 @@
-README.md 
+📘 Flashcard Learning App
+A modern single‑page flashcard learning platform built with React, Node.js, Express, and MongoDB, designed to help users study efficiently with personalised learning history, live search, and admin‑level management.
 
-FLASHCARD LEARNING APP 2
+🚀 Overview
+The Flashcard Learning App solves a simple problem:
+students need a fast, clean, and personalised way to study flashcards without distractions.
 
-Single-Page Dynamic Web Interface with Full CRUD, MongoDB Storage & Interactive Study Mode
+This app provides:
 
-![App Demo](https://github.com/Feleti996/flashcard-app/blob/main/Animation.gif)
-![Frontend](https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=white)
-![Backend](https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js&logoColor=white)
-![Server](https://img.shields.io/badge/Server-Express-000000?logo=express&logoColor=white)
-![Database](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb&logoColor=white)
-![Language](https://img.shields.io/badge/Language-JavaScript-F7DF1E?logo=javascript&logoColor=black)
+Secure user authentication (JWT + bcrypt)
 
-⭐ 1. Project Overview
+CRUD operations for flashcards
 
-The Flashcard Learning App is an interactive learning tool designed to help users memorise and analyse information using digital flashcards. Each card has a question, answer, and card type, letting users organise their study materials. The system works as a proper Single-Page Application (SPA): all interactions—creating, editing, deleting, adapting cards, switching topics, and entering Study Mode—happen without the page reloading.
+Real‑time live search
 
-All flashcards are stored in a MongoDB database, making sure that all the data stays intact across sessions. The project shows off a full setup, mixing the React frontend with a backend using Express.js and a MongoDB/Mongoose database to give a top-notch, responsive, and modern learning experience.
+Study mode with automatic learning history tracking
 
-🧰 2. Technology Stack Overview
+Admin dashboard to view all users + their study history
 
-This project is developed using a modern JavaScript full-stack framework.
+Fully responsive, seamless SPA interface
 
-The frontend uses parts of the React function and hooks like useState and useEffect to manage the status and behaviour of the SPA. Conditional rendering is used to switch between standard mode and Study Mode. Axios handles all API interactions, while CSS takes care of styling, animations, transitions, and responsive layouts. The functions/flashcardService.js file keeps all requests to the backend clean and well-maintained.
+🏗️ Tech Stack
+Frontend: React (SPA), Context API, Protected Routes
 
-The backend is constructed using Express.js, providing a REST API that supports the complete range of CRUD operations. CORS is enabled to facilitate communication with the React frontend, and express.json() is employed to parse the bodies of JSON requests.
+Backend: Node.js, Express
 
-MongoDB keeps all the flashcards stored all the time. The Mongoose schema lays out what each flashcard should look like, covering where the question, answer, type, and timestamps go. This makes sure the data keeps running smoothly and the database works reliably.
+Database: MongoDB
 
-Together, these technologies make a clean and modular setup where the React interface talks to the Express backend, which then chats with MongoDB to store and fetch flashcard data.
+Auth: JWT, bcrypt
 
-🖼️ 3. UI Preview
+Styling: Custom CSS (premium palette)
 
-HOME SCREEN LIGHT MODE
+Tools: Postman, MongoDB Compass
 
-![Home Screen](./frontend/src/assets/homescreen.jpg)
+📂 Folder Structure
+Backend
+Code
+backend/
+│
+├── config/
+│   └── db.js
+│
+├── controllers/
+│   ├── adminController.js
+│   ├── authController.js
+│   ├── flashcardController.js
+│   └── historyController.js
+│
+├── middleware/
+│   ├── authMiddleware.js
+│   └── roleMiddleware.js
+│
+├── models/
+│   ├── Flashcard.js
+│   ├── StudyHistory.js
+│   └── User.js
+│
+├── routes/
+│   ├── adminRoutes.js
+│   ├── authRoutes.js
+│   ├── flashcardRoutes.js
+│   └── historyRoutes.js
+│
+├── database/
+│   └── flashcards_export.json
+│
+├── makeAdmin.js
+├── server.js
+├── package.json
+└── .env (not included)
+Frontend
+Code
+frontend/
+│
+├── public/
+│   ├── index.html
+│   ├── favicon.png
+│   ├── manifest.json
+│   └── robots.txt
+│
+├── src/
+│   ├── assets/
+│   │   ├── homescreen.jpg
+│   │   ├── edit-mode.jpg
+│   │   ├── studymode.jpg
+│   │   ├── dark-mode.jpg
+│   │   └── pen.png
+│   │
+│   ├── components/
+│   │   ├── AddForm.js
+│   │   ├── AdminRoute.jsx
+│   │   └── Flashcard.js
+│   │
+│   ├── context/
+│   │   └── AuthContext.js
+│   │
+│   ├── pages/
+│   │   ├── AdminDashboard.jsx
+│   │   ├── Flashcards.jsx
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── StudyHistory.jsx
+│   │   └── StudyMode.jsx
+│   │
+│   ├── services/
+│   │   ├── adminService.js
+│   │   ├── authService.js
+│   │   ├── flashcardService.js
+│   │   └── historyService.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   ├── theme.css
+│   ├── flashcards.css
+│   ├── navbar.css
+│   ├── home.css
+│   ├── auth.css
+│   ├── study.css
+│   └── history.css
+│
+├── package.json
+└── .gitignore
+🔐 Authentication
+Users register and log in using email + password
 
-HOME SCREEN DARK MODE
+Passwords hashed using bcrypt
 
-![Dark Mode](./frontend/src/assets/dark-mode.jpg)
+JWT tokens protect private routes
 
-EDIT MODE
+Admin role has elevated permissions
 
-![edit-Mode](./frontend/src/assets/edit-mode.jpg)
+ProtectedRoute + AdminRoute on frontend
 
-STUDY MODE
+🧠 Entities & CRUD Operations
+1. User
+Register
 
-![studymode](./frontend/src/assets/studymode.jpg)
+Login
 
+Update profile
 
-🚀 4. Key Features
+Admin: view all users
 
-![Flashcards](https://img.shields.io/badge/Flashcards-Create%20%7C%20Edit%20%7C%20Delete-blue)
-![3D Flip](https://img.shields.io/badge/3D-Flip%20Animation-purple)
-![Study Mode](https://img.shields.io/badge/Study%20Mode-Randomised%20Cards-orange)
-![Used Tracking](https://img.shields.io/badge/Used%20Card%20Tracking-grey)
-![Theme](https://img.shields.io/badge/Theme-Light%20%2F%20Dark-black)
-![Responsive](https://img.shields.io/badge/Responsive-Mobile%20Friendly-green)
-![SPA](https://img.shields.io/badge/SPA-No%20Reloads-success)
+2. Flashcard
+Create
 
-The Flashcard Learning App packs in a bunch of handy features. You can make flashcards by popping in a question, answer, and category. All the flashcards show up in a neat grid layout. Each card can be clicked to flip between the question and answer with a slick high-res 3D rotation. You can also edit cards right there or delete them with a fade-out effect.
+Read
 
-Study Mode offers a simple interface for focus analysis. When it starts, the system picks a flashcard from the current deck and shows it. You can tap the card to flip it, revealing the answer with the same 3D flip animation as in normal mode. Every time a card comes up in Study Mode, it’s taken out of the active deck, so you won’t see the same card again during the session. After adjusting and checking the answer, the user can click 'Next' to load a random card from the rest of the deck. This continues until there are no more cards. Without any cards left in the deck, Study Mode can't go on. The full flash card is only brought back when the user creates a new card, which starts reloading all the flashcards from the database.
+Update
 
-The app distinguishes flashcards that have already been viewed in Study Mode. When a card is displayed during a training session, it is marked as "used" in the database and shown in a dark format when it returns to normal. This allows users to easily identify which cards have been studied and which have not been checked.
+Delete
 
-The feature comes with a Light/Dark theme switch, smooth animations, and a fully mobile-responsive layout. Improvements for accessibility like keyboard focus and navigation make sure the user experience is great. Everything happens without page reloads, keeping the quality that an SPA needs.
+Live search
 
-Features: 
+3. Study History
+Automatically recorded when user studies
 
-- Create, edit and delete flashcards 
-- 3D flip animation 
-- Study mode with randomised cards 
-- Card icon shown after study mode (greyed out once viewed) 
-- Light/dark theme toggle 
-- Full response layout 
-- Single page app (no reloads)
+Admin can view all users’ history
 
+✔ Meets assignment requirement of 3 conceptual entities with CRUD.
 
+🔎 Live Search
+The flashcard list updates instantly as the user types.
+No page reloads.
+SPA behaviour maintained.
 
-📁 5. Folder Layout
+🎨 User Interface
+Clean, responsive layout
 
-The project is split into three main directories, keeping the backend logic, frontend UI, and database export separate. 
+Dark mode
 
-The backend directory contains the Express server (server.js), which manages all API routes, request processing, and communication with the MongoDB database. It also includes the Mongoose schema that defines the structure of each flashcard, along with the backend package.json file and dependencies required to run the server.
+Smooth animations
 
-The front directory holds the full version of React. It has the public folder for static stuff like index.html and icons, and the src folder, which has all the React components, styling files like App.css, the main interface in App.js, and the services/flashcardService.js file that handles all the API calls to the backend. This setup keeps the user interface tidy, modular, and easy to look after.
+SPA navigation
 
-The database folder holds the MongoDB collection (flashcards_export.json) used for annotation and checking. These three folders clearly split the frontend, backend, and data centre, keeping things organised, easy to maintain, and simple to expand.
+Admin dashboard with tables + controls
 
-This framework neatly separates the backend server, React frontend, and database export, making for a modular, easy-to-maintain and scalable full-stack app.
+▶️ How to Run the App
+1. Backend
+Code
+cd backend
+npm install
+npm start
+Backend runs on:
+http://localhost:5000
 
+2. Frontend
+Code
+cd frontend
+npm install
+npm start
+Frontend runs on:
+http://localhost:3000
 
-🏃‍♂️ 6. How to go about processing the application
+3. Environment Variables
+Create a .env file inside backend:
 
-To run the backend, open a terminal and go to the backend folder. Install the dependencies with npm install, make sure MongoDB is running locally, and start the backend server with npm start. The backend will run on http://localhost:5000.
+Code
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+🗄️ Database Export
+Your database export is located in:
 
-To run the frontend, open another terminal and head to the frontend folder. Install the dependencies with npm install and start the React development server using npm start. The frontend will run on http://localhost:3000. Once both servers are up and running, the system is good to go.
+Code
+/backend/database/flashcards_export.json
+This includes sample flashcards for testing.
 
-🌐 7. Deployment Overview
+🛠️ Admin Account for Marking
+Code
+Email: admin@example.com
+Password: admin123
+Role: admin
+👥 Workload Allocation
+This assignment was completed individually.
 
-The system runs locally using the React development server on port 3000 and the Express backend on port 5000. MongoDB also runs locally. If you use it in the future, recommended services are Vercel or Netlify for the frontend, Render or Railway for the backend, and MongoDB Atlas for the database.
+All backend, frontend, UI, CRUD logic, authentication, admin dashboard, and documentation were completed by:
 
-🗄️ 8. Export of Database
-
-To simulate stable data, you can export the MongoDB collection using MongoDB Compass. The exported JSON file is in the database/flashcards_export.json entry.
-
-🧩 9. Overcoming challenges
-
-We sorted out quite a few challenges during development, like making sure CRUD worked fully with MongoDB and Mongoose, handling async API calls between React and Express, fixing CORS problems, and keeping the SPA behaviour through state management. Other bits we tackled were adding card animations, boosting accessibility, stopping UI glitches when editing or deleting, and keeping the API definition in a single storage file.
-
-🔮 10. Future Enhancements
-
-Improvements that could be made include using a spaced-repetition study algorithm, adding a shuffle mode and progress tracking, introducing the user to individual decks, expanding Study Mode with scores and timers, moving the database to the cloud, and adding category filtering and search functionality.
-
-👤 11. Developer
-
-Developed by Alfred David Teaupa — 11502770 
-University of Technology Sydney 
-Assignment 1 — Dynamic Web Interface to a Database System
+Alfred David Teaupa (Feleti)
