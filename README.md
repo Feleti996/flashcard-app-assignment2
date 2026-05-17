@@ -1,160 +1,101 @@
 📘 Flashcard Learning App — FullStack SPA with Authentication, Admin Dashboard & Study History
 
-The Flashcard Learning App is a fullstack learning platform designed to provide students with a fast, clean and personalised way to study digital flashcards. It operates as a true SinglePage Application (SPA), ensuring that all interactions occur without page reloads, including authentication, flashcard management, study mode transitions and history tracking. The system integrates a React frontend with a Node.js and Express backend, supported by a MongoDB database, and includes secure JWT authentication, rolebased access control, and a complete admin dashboard. The application offers a responsive interface, multiple themes, smooth animations and a structured study workflow that automatically records user progress.
+The Flashcard Learning App is a thorough learning app designed to give students a fast, clean, and personalised way to learn with digital cards. It works as a proper Single Page Application (SPA), making sure all actions happen without reloading the page, including logging in, managing flashcards, switching learning modes, and tracking history. The system combines a React frontend with a Node.js and Express backend, supported by a MongoDB database, and includes JWT security, access control, and a full admin dashboard. The app provides responsive interactions, lots of themes, top-notch animations, and a structured learning process that keeps track of user progress.
 
-The platform is built around three core entities: Users, Flashcards and Study History. Users can register, log in and access personalised study features, while administrators have elevated permissions to view all users, flashcards and study records. Flashcards support full CRUD operations and include live search functionality for efficient filtering. Study History is automatically generated during Study Mode, allowing users to review their learning progress and enabling administrators to monitor activity across the system. These three entities fully satisfy the assignment requirement for multiple conceptual entities with CRUD operations.
+The platform is built around three main elements: Users, Flashcards, and Study History. Users can sign up, log in, and access private training programmes, while administrators have higher access to all users, flashcards, and training records. The flashcards support the full range of CRUD activities and include direct search for a positive test. Learning History is created automatically during Study Mode, letting users track their learning progress and allowing administrators to review activities in the system. These three companies fully meet the requirements for the various think tanks that use CRUD.
 
-The application includes a wide range of features designed to enhance the learning experience. Users can create, edit and delete flashcards, each of which includes a question, answer and optional category. The interface supports a 3D flip animation for both normal viewing and Study Mode, where cards are presented in random order and removed from the active deck once viewed. The system prevents repeated cards within a single session and automatically stores each study event in the database. The interface also includes a theme system with light, dark and highcontrast modes, ensuring accessibility and visual comfort across different environments. The admin dashboard provides a centralised view of users, flashcards and study history, enabling full platform oversight.
+The programme includes a variety of features designed to boost the learning experience. You can create, edit and delete flashcards, which include a question, answer and options. The interface supports a 3D flip animation for regular viewing and Study Mode, where cards are shown in a random order and removed from the active deck once seen. The system stops cards from being repeated in a single session and automatically saves everything in the database. There's also a theme system with light, dark and high contrast options, making it easy to use comfortably in different environments. The admin dashboard lets you see users, flashcards and learning history, giving full control over the platform.
 
-The project is developed using a modern JavaScript fullstack architecture. The frontend uses React with Context API for authentication state management, protected routes for access control and Axios for API communication. The backend uses Express to define RESTful routes, bcrypt for password hashing, JWT for secure authentication and Mongoose for schemabased interaction with MongoDB. This combination ensures a modular, scalable and maintainable system where the frontend communicates cleanly with the backend, and the backend reliably manages persistent data storage.
+The project is built using a full set of modern JavaScript. The frontend uses React and the Context API to manage authentication, secure paths to control access, and Axios to talk to the API. The backend uses Express to handle RESTful routes, bcrypt to hash passwords, JWT for authentication, and Mongoose to work with MongoDB schemas. This setup makes for a modular, scalable, and easy-to-manage system where the frontend and backend work together smoothly, and the backend reliably handles data storage.
 
 📂 Folder Structure
 
-(One of the two sections intentionally kept in nonparagraph format)
 
 **Code**
 
 backend/
-
 │
-
 ├── config/
-
-│   └── db.js
-
+│ └── db.js
 │
-
 ├── controllers/
-
-│   ├── adminController.js
-
-│   ├── authController.js
-
-│   ├── flashcardController.js
-
-│   └── historyController.js
-
+│ ├── adminController.js
+│ ├── authController.js
+│ ├── flashcardController.js
+│ └── historyController.js
 │
-
 ├── middleware/
-
-│   ├── authMiddleware.js
-
-│   └── roleMiddleware.js
-
+│ ├── authMiddleware.js
+│ └── roleMiddleware.js
 │
-
 ├── models/
-
-│   ├── Flashcard.js
-
-│   ├── StudyHistory.js
-
-│   └── User.js
-
+│ ├── Flashcard.js
+│ ├── StudyHistory.js
+│ └── User.js
 │
-
 ├── routes/
-
-│   ├── adminRoutes.js
-
-│   ├── authRoutes.js
-
-│   ├── flashcardRoutes.js
-
-│   └── historyRoutes.js
-
+│ ├── adminRoutes.js
+│ ├── authRoutes.js
+│ ├── flashcardRoutes.js
+│ └── historyRoutes.js
 │
-
 ├── database/
-
-│   └── flashcards_export.json
-
+│ └── flashcards_export.json
 │
-
 ├── makeAdmin.js
-
 ├── server.js
-
 └── package.json
-
 Code
 
 frontend/
-
 │
-
 ├── public/
-
-│   ├── index.html
-
-│   ├── favicon.png
-
-│   ├── manifest.json
-
-│   └── robots.txt
-
+│ ├── index.html
+│ ├── favicon.png
+│ ├── manifest.json
+│ └── robots.txt
 │
-
 ├── src/
-
-│   ├── assets/
-
-│   ├── components/
-
-│   ├── context/
-
-│   ├── pages/
-
-│   ├── services/
-
-│   ├── App.js
-
-│   ├── App.css
-
-│   ├── index.js
-
-│   ├── theme.css
-
-│   ├── flashcards.css
-
-│   ├── navbar.css
-
-│   ├── home.css
-
-│   ├── auth.css
-
-│   ├── study.css
-
-│   └── history.css
-
+│ ├── assets/
+│ ├── components/
+│ ├── context/
+│ ├── pages/
+│ ├── services/
+│ ├── App.js
+│ ├── App.css
+│ ├── index.js
+│ ├── theme.css
+│ ├── flashcards.css
+│ ├── navbar.css
+│ ├── home.css
+│ ├── auth.css
+│ ├── study.css
+│ └── history.css
 │
-
 └── package.json
-
 Code
 
 🖼 Screenshots
 
-The application includes a range of interface views such as the Home Page, Admin Dashboard, Flashcard Creation and Editing screens, Study Mode (front and back views), Theme Previews, MongoDB Compass view and the backend server console. These screenshots demonstrate the responsive layout, theme system, study workflow and administrative tools. Replace each placeholder with the appropriate image path when adding screenshots to the repository.
+Admin Dashboard, Flashcard Creation and Editing screens, Study Mode (front and back views), Theme Previews, MongoDB Compass view and the backend server console. These screenshots show the structure of the story, the content process, the learning process and the admin tools. Swap out each placeholder
 
 🔐 Authentication
 
-The system uses two separate account types: a normal user account that accesses the user dashboard and study features, and an adminonly account that unlocks the Admin Dashboard with elevated permissions. The authentication system is built using JWT and bcrypt to ensure secure user access. Users register with an email and password, which is hashed before storage. Upon login, a JWT token is issued and used to authenticate protected routes. The frontend uses Context API to store authentication state and applies ProtectedRoute and AdminRoute components to restrict access to sensitive pages. Administrators have elevated permissions that allow them to view all users, flashcards and study history.
+The system has two types of accounts: a regular user account for accessing the user and events dashboard, and an admin account that opens the Admin Dashboard with higher permissions. The authentication system uses JWT and bcrypt to keep user access secure. Users sign up with an email and password, which is hashed before being saved. When logging in, a JWT token is issued and used to access protected routes. The frontend uses the Context API to keep track of authentication status and uses the ProtectedRoute and AdminRoute components to control access to sensitive pages. Admins get increased access to all users, flashcards, and school history.
 
-**Tutor Testing Note:** Tutors can register a new account and optionally promote it to admin using the provided makeAdmin.js script or by updating the user’s role directly in MongoDB Compass. This allows full testing of both the user dashboard and the adminonly dashboard without requiring preset login credentials.
+**Tutor Testing Note:** Instructors can set up a new account and make it an admin using the provided makeAdmin.js script or by automatically changing the user's role in MongoDB Compass. This lets you fully test the user and admin dashboards without needing pre-set login details.
 
 🧩 Overcoming Challenges
 
-Throughout development, several technical challenges were addressed to ensure a stable and responsive application. Managing full CRUD operations with MongoDB and Mongoose required careful schema design and validation. Asynchronous communication between React and Express introduced timing and statemanagement issues that were resolved through structured API services and controlled component updates. CORS conflicts were resolved by configuring the backend to accept requests from the frontend development server. Maintaining SPA behaviour required thoughtful use of React state, conditional rendering and route protection. Additional challenges included implementing smooth animations, preventing UI glitches during editing and deletion, and centralising API logic to improve maintainability.
+Make sure the app is stable and responsive. Careful schema design and checking were needed to fully manage the CRUD and Mongoose projects. The async communication between React and Express caused timing and state issues, which were sorted out with structured API functions and CORS updates. CORS problems were fixed by setting up the backend to respond to requests from the frontend dev server. It was important to use React standards, SPA-level rendering, and route protection. Other challenges included creating smooth animations, fixing UI bugs during editing and deletion, and centralising the API definition for easier maintenance.
 
 🌐 Deployment Overview
 
-The application currently runs locally using the React development server on port 3000 and the Express backend on port 5000, with MongoDB running either locally or through MongoDB Atlas. For future deployment, recommended hosting platforms include Vercel or Netlify for the frontend, Render or Railway for the backend and MongoDB Atlas for cloudbased database hosting. This deployment stack supports a fully scalable and productionready environment.
+The system currently runs locally using the React development server on port 3000 and the Express backend on port 5000, with MongoDB running locally on MongoDB Atlas. For future deployments, it's suggested to use Vercel or Netlify for the frontend, Render or Railway for the backend, and MongoDB Atlas for the cloud. This setup supports a fully scalable and ready-to-build environment.
 
 🗄️ Database Export
 
-A sample dataset is included in the backend directory under database/flashcards_export.json. This export provides a consistent set of flashcards for testing and demonstration purposes.
+A sample of the dataset is included in the backend directory in database/flashcards_export.json. This export gives a set of flashcards to try out and show off.
 
 ▶️ How to Run the App
 
@@ -163,21 +104,15 @@ A sample dataset is included in the backend directory under database/flashcards_
 **Backend**
 
 cd backend
-
 npm install
-
 npm start
-
 Code
 
 **Frontend**
 
 cd frontend
-
 npm install
-
 npm start
-
 Code
 
 **Environment Variables**
@@ -185,23 +120,22 @@ Code
 Create a .env file inside the backend folder:
 
 MONGO_URI=your_mongodb_connection_string
-
 JWT_SECRET=your_secret_key
-
 Code
 
-**MongoDB Note:** Tutors can run the backend using their own MongoDB connection string by creating a .env file inside the backend folder. The application does not require access to the developer’s personal MongoDB account. Tutors may use either a local MongoDB instance or their own MongoDB Atlas cluster. This allows them to create test users and optionally promote an account to admin for testing the Admin Dashboard.
+**MongoDB Note:** Instructors can run the backend using their MongoDB connection by creating a .env file in the backend folder. The system doesn't need access to the developer's personal MongoDB account. Instructors can use a local MongoDB setup or their MongoDB Atlas cluster. This lets them create users for testing and give the admin an account to try out the Admin Dashboard.
 
 🔮 Future Enhancements
 
-Future improvements may include implementing a spacedrepetition algorithm to optimise learning efficiency, adding shuffle and progresstracking features, introducing userspecific decks and categories, expanding Study Mode with timers and scoring, deploying the database to the cloud for improved scalability and adding advanced search and filtering capabilities. These enhancements would further strengthen the learning experience and extend the platform’s functionality.
+Future improvements could include using a spaced repetition algorithm to boost learning success, adding shuffle and progress tracking, creating user-specific decks and categories, expanding Study Mode with timers and scores, moving the database to the cloud to improve scalability, and adding more advanced search and analysis. These updates will make the learning experience even better and make the platform more functional.
 
 👥 Workload Allocation
 
-This assignment was completed individually. All backend development, frontend implementation, UI design, CRUD logic, authentication system, admin dashboard and documentation were completed by Alfred David Teaupa.
+This assignment was done individually. Alfred David Teaupa handled all the backend development, frontend setup, UI design, CRUD setup, verification system, admin dashboard, and documentation.
 
 👤 Developer
 
 Developed by Alfred David Teaupa — Student ID 11502770,  
 University of Technology Sydney,  
 for Assignment 2: Advanced Website Based on Modern Frontend Libraries.
+
