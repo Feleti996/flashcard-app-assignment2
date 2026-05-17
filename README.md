@@ -9,60 +9,108 @@ The programme includes a variety of features designed to boost the learning expe
 The project is built using a full set of modern JavaScript. The frontend uses React and the Context API to manage authentication, secure paths to control access, and Axios to talk to the API. The backend uses Express to handle RESTful routes, bcrypt to hash passwords, JWT for authentication, and Mongoose to work with MongoDB schemas. This setup makes for a modular, scalable, and easy-to-manage system where the frontend and backend work together smoothly, and the backend reliably handles data storage.
 
 
-## Folder Structure
+## 📂 Folder Structure
 
 ```text
 flashcard-app/
+│
 ├── backend/
 │   ├── config/
-│   │   └── db.js
+│   │
 │   ├── controllers/
 │   │   ├── adminController.js
 │   │   ├── authController.js
 │   │   ├── flashcardController.js
 │   │   └── historyController.js
+│   │
 │   ├── middleware/
 │   │   ├── authMiddleware.js
 │   │   └── roleMiddleware.js
+│   │
 │   ├── models/
 │   │   ├── Flashcard.js
 │   │   ├── StudyHistory.js
 │   │   └── User.js
+│   │
 │   ├── routes/
 │   │   ├── adminRoutes.js
 │   │   ├── authRoutes.js
 │   │   ├── flashcardRoutes.js
 │   │   └── historyRoutes.js
-│   ├── database/
-│   │   └── flashcards_export.json
+│   │
+│   ├── scripts/
+│   │   └── cleanupHistory.js
+│   │
+│   ├── .env.example
 │   ├── makeAdmin.js
 │   ├── server.js
-│   └── package.json
+│   ├── package.json
+│   └── package-lock.json
+│
+├── database/
+│   └── flashcards_export.json
 │
 ├── frontend/
 │   ├── public/
-│   │   ├── index.html
+│   │   ├── favicon.ico
 │   │   ├── favicon.png
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
 │   │   ├── manifest.json
+│   │   ├── pen.png
 │   │   └── robots.txt
+│   │
 │   ├── src/
 │   │   ├── assets/
+│   │   │   └── pen.png
+│   │   │
 │   │   ├── components/
+│   │   │   ├── AddForm.js
+│   │   │   ├── AdminRoute.jsx
+│   │   │   ├── Flashcard.js
+│   │   │   ├── Navbar.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   │
 │   │   ├── context/
+│   │   │   ├── AuthContext.js
+│   │   │   └── ThemeContext.jsx
+│   │   │
 │   │   ├── pages/
+│   │   │   ├── AdminDashboard.jsx
+│   │   │   ├── Flashcards.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── StudyHistory.jsx
+│   │   │   └── StudyMode.jsx
+│   │   │
 │   │   ├── services/
+│   │   │   ├── adminService.js
+│   │   │   ├── authService.js
+│   │   │   ├── flashcardService.js
+│   │   │   └── historyService.js
+│   │   │
 │   │   ├── App.js
 │   │   ├── App.css
+│   │   ├── App.test.js
 │   │   ├── index.js
+│   │   ├── index.css
 │   │   ├── theme.css
 │   │   ├── flashcards.css
 │   │   ├── navbar.css
 │   │   ├── home.css
 │   │   ├── auth.css
 │   │   ├── study.css
-│   │   └── history.css
-│   └── package.json
+│   │   ├── history.css
+│   │   ├── setupTests.js
+│   │   └── reportWebVitals.js
+│   │
+│   ├── package.json
+│   └── package-lock.json
 │
+├── .gitignore
+├── package-lock.json
 └── README.md
 ```
 
