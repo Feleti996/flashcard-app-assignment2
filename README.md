@@ -10,67 +10,6 @@ The project is built using a full set of modern JavaScript. The frontend uses Re
 
 📂 Folder Structure
 
-flashcard-app/
-│
-├── backend/
-│   ├── config/
-│   │   └── db.js
-│   │
-│   ├── controllers/
-│   │   ├── adminController.js
-│   │   ├── authController.js
-│   │   ├── flashcardController.js
-│   │   └── historyController.js
-│   │
-│   ├── middleware/
-│   │   ├── authMiddleware.js
-│   │   └── roleMiddleware.js
-│   │
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Flashcard.js
-│   │   └── StudyHistory.js
-│   │
-│   ├── routes/
-│   │   ├── adminRoutes.js
-│   │   ├── authRoutes.js
-│   │   ├── flashcardRoutes.js
-│   │   └── historyRoutes.js
-│   │
-│   ├── database/
-│   │   └── flashcards_export.json
-│   │
-│   ├── makeAdmin.js
-│   ├── server.js
-│   └── package.json
-│
-├── frontend/
-│   ├── public/
-│   │   ├── index.html
-│   │   ├── favicon.png
-│   │   ├── manifest.json
-│   │   └── robots.txt
-│   │
-│   ├── src/
-│   │   ├── assets/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.js
-│   │   ├── App.css
-│   │   ├── index.js
-│   │   ├── theme.css
-│   │   ├── flashcards.css
-│   │   ├── navbar.css
-│   │   ├── home.css
-│   │   ├── auth.css
-│   │   ├── study.css
-│   │   └── history.css
-│   │
-│   └── package.json
-│
-└── README.md
 
 
 🖼 Screenshots
