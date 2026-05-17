@@ -67,32 +67,29 @@ button {
   background: var(--accent);
   color: white;
 }
+/* THEME 1 — LIGHT MODE (unchanged) */
 .theme1 {
-  --front: var(--pink);
-  --back: var(--cinnabar);
-  --card-bg: var(--blush);
-   --front: #F45B69;     /* pink */
-  --back: #F13030;      /* cinnabar */
-  --card-bg: #22181C;   /* coffee (dark) */ 
+  --front: var(--pink);        /* #F45B69 */
+  --back: var(--blush);        /* #F6E8EA */
+  --card-bg: var(--cinnabar);  /* #F13030 */
 }
+
+/* THEME 2 — DARK MODE (light flip‑card colours only) */
 .theme2 {
-  --front: #3a2a2e;
-  --back: var(--pink);
-  --card-bg: var(--coffee);
-  --front: #5A0001;      /* cherry */
-  --back: #F13030;       /* cinnabar */
-  --card-bg: #3A2A2E;    /* medium dark — visible against page */
+  --front: var(--blush);       /* #F6E8EA — light front */
+  --back: var(--pink);         /* #F45B69 — bright back */
+  --card-bg: var(--cinnabar);  /* #F13030 — strong background */
+   --text-color: var(--coffee); /* #22181C — dark text so it NEVER disappears */
 }
+
+
+
+
+
+/* THEME 3 — HIGH CONTRAST (reshuffled) */
 .theme3 {
-  --front: var(--cherry);
-  --back: var(--cinnabar);
-  --card-bg: var(--pink);
-  --front: #F45B69;     /* strong pink — NOT white */
-  --back: #F13030;      /* cinnabar */
-  --card-bg: #22181C;   /* dark coffee — contrasts with page */
+  --front: var(--cinnabar);    /* #F13030 */
+  --back: var(--coffee);       /* #22181C */
+  --card-bg: var(--blush);     /* #F6E8EA */
 }
-
-
-
-
 

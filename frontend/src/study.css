@@ -261,3 +261,8 @@ min-height: 480px !important;
 .study-card.flipped .study-inner {
   transform: rotateY(180deg);
 }
+.study-card,
+.study-face.front,
+.study-face.back {
+  color: var(--text-color) !important;
+}
