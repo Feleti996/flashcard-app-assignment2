@@ -137,24 +137,32 @@ The system currently runs locally using the React development server on port 300
 
 A sample of the dataset is included in the backend directory in database/flashcards_export.json. This export gives a set of flashcards to try out and show off.
 
-▶️ How to Run the App
+## ▶️ How to Run the App
 
+### Backend
 
-**Backend** 
-cd backend 
-npm install 
-npm start 
-Code 
-**Frontend** 
-cd frontend 
-npm install 
-npm start 
-Code 
-**Environment Variables** 
-Create a .env file inside the backend folder: 
-MONGO_URI=your_mongodb_connection_string 
-JWT_SECRET=your_secret_key 
-Code
+```bash
+cd backend
+npm install
+npm start
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+### Environment Variables
+
+Create a `.env` file inside the `backend` folder:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+```
 
 **MongoDB Note:** Instructors can run the backend using their MongoDB connection by creating a .env file in the backend folder. The system doesn't need access to the developer's personal MongoDB account. Instructors can use a local MongoDB setup or their MongoDB Atlas cluster. This lets them create users for testing and give the admin an account to try out the Admin Dashboard.
 
