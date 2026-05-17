@@ -8,37 +8,33 @@ The programme includes a variety of features designed to boost the learning expe
 
 The project is built using a full set of modern JavaScript. The frontend uses React and the Context API to manage authentication, secure paths to control access, and Axios to talk to the API. The backend uses Express to handle RESTful routes, bcrypt to hash passwords, JWT for authentication, and Mongoose to work with MongoDB schemas. This setup makes for a modular, scalable, and easy-to-manage system where the frontend and backend work together smoothly, and the backend reliably handles data storage.
 
-📂 Folder Structure
+
+## Folder Structure
+
+```text
 flashcard-app/
-│
 ├── backend/
 │   ├── config/
 │   │   └── db.js
-│   │
 │   ├── controllers/
 │   │   ├── adminController.js
 │   │   ├── authController.js
 │   │   ├── flashcardController.js
 │   │   └── historyController.js
-│   │
 │   ├── middleware/
 │   │   ├── authMiddleware.js
 │   │   └── roleMiddleware.js
-│   │
 │   ├── models/
-│   │   ├── User.js
 │   │   ├── Flashcard.js
-│   │   └── StudyHistory.js
-│   │
+│   │   ├── StudyHistory.js
+│   │   └── User.js
 │   ├── routes/
 │   │   ├── adminRoutes.js
 │   │   ├── authRoutes.js
 │   │   ├── flashcardRoutes.js
 │   │   └── historyRoutes.js
-│   │
 │   ├── database/
 │   │   └── flashcards_export.json
-│   │
 │   ├── makeAdmin.js
 │   ├── server.js
 │   └── package.json
@@ -49,7 +45,6 @@ flashcard-app/
 │   │   ├── favicon.png
 │   │   ├── manifest.json
 │   │   └── robots.txt
-│   │
 │   ├── src/
 │   │   ├── assets/
 │   │   ├── components/
@@ -66,10 +61,10 @@ flashcard-app/
 │   │   ├── auth.css
 │   │   ├── study.css
 │   │   └── history.css
-│   │
 │   └── package.json
 │
 └── README.md
+```
 
 
 🖼 Screenshots
