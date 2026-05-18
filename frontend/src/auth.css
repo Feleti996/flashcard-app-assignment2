@@ -2,7 +2,7 @@
    AUTH UI — PROFESSIONAL VERSION
    ================================ */
 
-/* THEME OVERRIDES (kept exactly as you added them) */
+/* THEME OVERRIDES */
 .login-page {
   background: var(--bg) !important;
   color: var(--text) !important;
@@ -49,22 +49,17 @@
 }
 
 /* ================================
-   ORIGINAL AUTH UI (NO CHANGES)
+   ORIGINAL AUTH UI
    ================================ */
 
-/* Prevent global CSS from affecting Login/Register */
 .login-page * {
   all: unset;
   display: revert;
   box-sizing: border-box;
-
-  /* allow theme variables to pass through */
   color: inherit;
   background: inherit;
 }
 
-
-/* Re-enable normal behavior for wrapper */
 .login-page {
   all: revert;
   background: var(--coffee);
@@ -75,7 +70,6 @@
   padding: 20px;
 }
 
-/* Auth Container */
 .auth-container {
   width: 360px;
   background: var(--cherry);
@@ -88,13 +82,11 @@
   color: var(--blush);
 }
 
-/* Fade animation */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Title */
 .auth-container h2 {
   margin-bottom: 20px;
   font-size: 1.9rem;
@@ -103,7 +95,6 @@
   letter-spacing: 1px;
 }
 
-/* Inputs */
 .auth-container input {
   width: 100%;
   padding: 14px;
@@ -127,7 +118,6 @@
   background: var(--cherry);
 }
 
-/* Button */
 .auth-container button {
   width: 100%;
   padding: 14px;
@@ -148,7 +138,6 @@
   transform: scale(1.03);
 }
 
-/* Error Message */
 .error {
   background: var(--cinnabar);
   color: var(--blush);
@@ -160,7 +149,6 @@
   text-align: center;
 }
 
-/* Switch link (Login <-> Register) */
 .auth-switch {
   margin-top: 18px;
   font-size: 15px;
@@ -177,4 +165,99 @@
 .auth-switch a:hover {
   color: var(--cinnabar);
 }
+
+/* ============================================================
+   PREMIUM LOGIN & REGISTER BOX
+============================================================ */
+
+.login-page > .auth-container {
+  background: rgba(90, 0, 1, 0.75) !important;
+  backdrop-filter: blur(14px) !important;
+  border-radius: 24px !important;
+  border: 1px solid var(--pink) !important;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35) !important;
+  padding: 40px 34px !important;
+  transition: 0.25s ease !important;
+  color: var(--blush) !important;
+}
+
+.login-page > .auth-container:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45) !important;
+}
+
+.login-page > .auth-container input {
+  background-color: #F6E8EA !important;
+  color: #22181C !important;
+  border: 2px solid #F45B69 !important;
+  border-radius: 12px !important;
+}
+
+.login-page > .auth-container input::placeholder {
+  color: #5A0001 !important;
+  opacity: 1 !important;
+}
+
+.login-page > .auth-container input:hover {
+  background-color: #F45B69 !important;
+  color: #F6E8EA !important;
+  border-color: #F13030 !important;
+  box-shadow: 0 0 10px rgba(241,48,48,0.45) !important;
+}
+
+.login-page > .auth-container input:focus {
+  border-color: var(--cinnabar) !important;
+  box-shadow: 0 0 10px rgba(241,48,48,0.4) !important;
+}
+
+.login-page > .auth-container button {
+  background: var(--pink) !important;
+  color: var(--coffee) !important;
+  border-radius: 14px !important;
+  padding: 16px !important;
+  font-size: 1.15rem !important;
+  transition: 0.25s ease !important;
+}
+
+.login-page > .auth-container button:hover {
+  transform: translateY(-2px) !important;
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+  box-shadow: 0 6px 16px rgba(241,48,48,0.45) !important;
+}
+
+.login-page > .auth-container > p {
+  margin-top: 26px !important;
+  font-size: 0.95rem !important;
+  opacity: 0.9;
+}
+
+.login-page > .auth-container > p a:hover {
+  color: var(--pink) !important;
+  text-shadow: 0 0 4px var(--pink);
+}
+
+/* Lighter background override */
+.login-page > .auth-container {
+  background-color: #F6E8EA !important;
+  color: #22181C !important;
+  border: 2px solid #F45B69 !important;
+}
+/* Fix heading text visibility */
+.login-page > .auth-container h2 {
+  color: #22181C !important; /* coffee text for contrast */
+}
+/* Flashcards page — make search bar visible */
+.flashcards-page input[type="search"] {
+  background: #FFFFFF !important;      /* clean white */
+  color: #22181C !important;           /* coffee text */
+  border: 2px solid #F45B69 !important; /* pink border */
+  border-radius: 10px !important;
+}
+
+.flashcards-page input[type="search"]::placeholder {
+  color: #5A0001 !important; /* cherry */
+  opacity: 0.9 !important;
+}
+
 
