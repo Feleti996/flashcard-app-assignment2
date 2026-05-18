@@ -119,7 +119,45 @@ flashcard-app/
 
 # Screenshots
 
-Admin Dashboard, Flashcard Creation and Editing screens, Study Mode (front and back views), Theme Previews, MongoDB Compass view and the backend server console. These screenshots show the structure of the story, the content process, the learning process and the admin tools. Swap out each placeholder
+Admin Dashboard, Flashcard Creation and Editing screens, Study Mode (front and back views), Theme Previews, MongoDB Compass view and the backend server console. These screenshots show the structure of the story, the content process, the learning process and the admin tools. Swap out each placeholder.
+
+# Screenshots
+
+## Home Page
+![Home Page](./src/assets/screenshots/Home-Page.png)
+
+## Login Page
+![Login Page](./src/assets/screenshots/Login-page.png)
+
+## Register Page
+![Register Page](./src/assets/screenshots/Register-Page.png)
+
+## User Page
+![User Page](./src/assets/screenshots/User-Page.png)
+
+## Flashcard CRUD Page
+![Flashcard CRUD Page](./src/assets/screenshots/Flashcard-CRUD-Page.png)
+
+## Study Mode
+![Study Mode](./src/assets/screenshots/Study-Mode.png)
+
+## Study History Page
+![Study History Page](./src/assets/screenshots/Study-History-Page.png)
+
+## Admin Dashboard
+![Admin Dashboard](./src/assets/screenshots/Admin-Dashboard.png)
+
+## Admin History
+![Admin History](./src/assets/screenshots/Admin-History.png)
+
+## Light Mode
+![Light Mode](./src/assets/screenshots/Light-Mode.png)
+
+## Dark Mode
+![Dark Mode](./src/assets/screenshots/Dark-Mode.png)
+
+## High Contrast Mode
+![High Contrast Mode](./src/assets/screenshots/High-Contrast.png)
 
 # Authentication
 

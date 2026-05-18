@@ -332,5 +332,51 @@
   box-shadow: 0 8px 18px rgba(0,0,0,0.22);
   border-color: var(--cinnabar);
 }
+/* ============================================
+   FLASHCARDS — FORCE OVERRIDE SEARCH INPUT
+============================================ */
 
+/* This selector is stronger than inline styles */
+.flashcards-page .search-input {
+  all: unset !important;              /* wipes inline styles */
+  box-sizing: border-box !important;
 
+  width: 100% !important;
+  padding: 14px 18px !important;
+  margin-top: 15px !important;
+  margin-bottom: 20px !important;
+
+  background: #F6E8EA !important;      /* blush */
+  color: #22181C !important;            /* coffee */
+  border: 2px solid #F45B69 !important; /* pink */
+  border-radius: 14px !important;
+
+  font-size: 1.05rem !important;
+  font-family: inherit !important;
+
+  transition: 0.25s ease !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08) !important;
+}
+
+/* Placeholder */
+.flashcards-page .search-input::placeholder {
+  color: #5A0001 !important; /* cherry */
+  opacity: 0.9 !important;
+}
+
+/* Hover */
+.flashcards-page .search-input:hover {
+  background: #F45B69 !important;       /* pink */
+  color: #F6E8EA !important;            /* blush */
+  border-color: #F13030 !important;     /* cinnabar */
+  box-shadow: 0 0 10px rgba(241,48,48,0.45) !important;
+}
+
+/* Focus */
+.flashcards-page .search-input:focus {
+  outline: none !important;
+  background: #FFFFFF !important;       /* white */
+  color: #22181C !important;
+  border-color: #F13030 !important;
+  box-shadow: 0 0 12px rgba(241,48,48,0.55) !important;
+}

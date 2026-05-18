@@ -264,5 +264,162 @@ min-height: 480px !important;
 .study-card,
 .study-face.front,
 .study-face.back {
-  color: var(--text-color) !important;
+  color: var(--text) !important;   /* your actual text variable */
+}
+
+/* ================================
+   PERFECTED FRONT PAGE — FINAL
+   ================================ */
+
+/* Wrapper spacing */
+.study-wrapper {
+  padding-top: 70px !important;
+  text-align: center;
+}
+
+/* "Studying X / Y" */
+.study-progress-text:first-of-type {
+  font-size: 30px !important;
+  font-weight: 900 !important;
+  color: var(--accent) !important;
+  margin-bottom: 8px !important;
+}
+
+/* "X cards remaining" */
+.study-progress-text:nth-of-type(2) {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  opacity: 0.85;
+  margin-bottom: 25px !important;
+  color: var(--accent) !important;
+}
+
+/* Progress bar */
+.study-progress-bar {
+  width: 85% !important;
+  max-width: 480px !important;
+  height: 18px !important;
+  background: var(--card);
+  border-radius: 12px;
+  border: 2px solid var(--accent);
+  margin: 0 auto 40px auto !important;
+  overflow: hidden;
+}
+
+/* Progress fill */
+.study-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+/* "Study Mode" title */
+.study-title {
+  font-size: 38px !important;
+  font-weight: 900 !important;
+  color: var(--accent) !important;
+  margin-bottom: 35px !important;
+  letter-spacing: 0.4px;
+}
+
+/* Start button */
+.study-btn.start {
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  padding: 18px 48px !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  border-radius: 16px !important;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.study-btn.start:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  opacity: 0.95;
+}
+/* ================================
+   PROFESSIONAL TEXT STYLING ONLY
+   ================================ */
+
+/* Headings: "Question" / "Answer" */
+.study-face h3 {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  color: var(--accent) !important;
+  text-align: center !important;
+  letter-spacing: 0.4px !important;
+  margin-bottom: 14px !important;
+  text-transform: uppercase;
+}
+
+/* Main flashcard text */
+.study-face p {
+  font-size: 21px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  color: var(--text) !important;
+  word-break: break-word !important;
+  white-space: pre-wrap !important;
+  text-align: left !important;
+  letter-spacing: 0.2px;
+}
+
+/* Optional: subtle emphasis for long answers */
+.study-face p strong {
+  font-weight: 700 !important;
+  color: var(--accent) !important;
+}
+
+/* Optional: italic text refinement */
+.study-face p em {
+  font-style: italic !important;
+  opacity: 0.9;
+}
+
+/* Text selection highlight */
+.study-face p::selection,
+.study-face h3::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+/* ================================
+   FIX: HEADING ALWAYS VISIBLE
+   ================================ */
+
+.study-face h3 {
+  color: var(--text) !important;   /* Always visible */
+  opacity: 1 !important;
+  visibility: visible !important;
+  font-weight: 900 !important;
+}
+/* ================================
+   FINAL THEME-AWARE TEXT FIX
+   ================================ */
+
+.study-face.front,
+.study-face.back,
+.study-face h3,
+.study-face p {
+  color: var(--text) !important;
+}
+
+/* Ensure visibility */
+.study-face h3,
+.study-face p {
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 5;
+}
+/* ================================
+   DARK MODE QUESTION TEXT FIX
+   ================================ */
+
+.study-face.front h3,
+.study-face.front p {
+  color: var(--coffee) !important;
 }
