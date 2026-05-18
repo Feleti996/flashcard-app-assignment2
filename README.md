@@ -119,7 +119,7 @@ flashcard-app/
 
 # Screenshots
 
-Admin Dashboard, Flashcard Creation and Editing screens, Study Mode (front and back views), Theme Previews, MongoDB Compass view and the backend server console. These screenshots show the structure of the story, the content process, the learning process and the admin tools. Swap out each placeholder.
+The system has a bunch of views like the Home Page, Admin Dashboard, Flashcard Creation and Editing screens, Study Mode (front and back), Theme Previews, MongoDB Compass view, and backend server console. These screenshots show the story format, content layout, learning process, and admin tools. All screenshots are saved at: frontend/src/assets/screenshots/
 
 ## Screenshots
 
