@@ -2,12 +2,67 @@
    AUTH UI — PROFESSIONAL VERSION
    ================================ */
 
+/* THEME OVERRIDES (kept exactly as you added them) */
+.login-page {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+.auth-container {
+  background: var(--card) !important;
+  color: var(--text) !important;
+}
+
+.auth-container input {
+  background: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border-color: var(--accent) !important;
+}
+
+.auth-container input::placeholder {
+  color: var(--input-placeholder) !important;
+}
+
+.auth-container button {
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+  border-color: var(--accent) !important;
+}
+
+.auth-container button:hover {
+  background: var(--button-hover) !important;
+  color: var(--button-hover-text) !important;
+}
+
+.error {
+  background: var(--error-bg) !important;
+  color: var(--error-text) !important;
+  border-color: var(--accent) !important;
+}
+
+.auth-switch a {
+  color: var(--accent) !important;
+}
+
+.auth-switch a:hover {
+  color: var(--accent-strong) !important;
+}
+
+/* ================================
+   ORIGINAL AUTH UI (NO CHANGES)
+   ================================ */
+
 /* Prevent global CSS from affecting Login/Register */
 .login-page * {
   all: unset;
   display: revert;
   box-sizing: border-box;
+
+  /* allow theme variables to pass through */
+  color: inherit;
+  background: inherit;
 }
+
 
 /* Re-enable normal behavior for wrapper */
 .login-page {
