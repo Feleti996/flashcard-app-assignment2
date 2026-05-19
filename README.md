@@ -219,7 +219,7 @@ JWT_SECRET=your_secret_key
 
 # Future Enhancements
 
-Future improvements could include using a spaced repetition algorithm to boost learning success, adding shuffle and progress tracking, creating user-specific decks and categories, expanding Study Mode with timers and scores, moving the database to the cloud to improve scalability, and adding more advanced search and analysis. These updates will make the learning experience even better and make the platform more functional.
+Future improvements could include using a spaced-repetition algorithm to boost learning success, adding shuffle and progress tracking, creating user-specific decks and categories, expanding Study Mode with timers and scores, moving the database to the cloud for better scalability, and adding search and testing features. Other planned updates include password and forgotten email recovery, multiplayer training sessions, and making it mobile-friendly to make learning even better and improve the platform's features.
 
 # Workload Allocation
 
