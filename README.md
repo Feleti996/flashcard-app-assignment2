@@ -221,7 +221,7 @@ Future improvements could include using a spaced repetition algorithm to boost l
 
 # Workload Allocation
 
-This assignment was done individually. Alfred David Teaupa handled all the backend development, frontend setup, UI design, CRUD setup, verification system, admin dashboard, and documentation.
+This work was personally completed by Alfred David Teaupa. The same student carried out all backend development, frontend implementation, UI design, CRUD functionality, authentication system, admin dashboard, database integration, testing, and documentation.
 
 # Developer
 
