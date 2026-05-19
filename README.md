@@ -1,7 +1,9 @@
 README.md
 
 # Flashcard Learning App — FullStack SPA with Authentication, Admin Dashboard & Study History
-
+<p align="center">
+  <img src="./frontend/src/assets/screenshots/animation.gif" alt="Flashcard App Demo" width="850"/>
+</p>
 The Flashcard Learning App is a thorough learning app designed to give students a fast, clean, and personalised way to learn with digital cards. It works as a proper Single Page Application (SPA), making sure all actions happen without reloading the page, including logging in, managing flashcards, switching learning modes, and tracking history. The system combines a React frontend with a Node.js and Express backend, supported by a MongoDB database, and includes JWT security, access control, and a full admin dashboard. The app provides responsive interactions, lots of themes, top-notch animations, and a structured learning process that keeps track of user progress.
 
 The platform is built around three main elements: Users, Flashcards, and Study History. Users can sign up, log in, and access private training programmes, while administrators have higher access to all users, flashcards, and training records. The flashcards support the full range of CRUD activities and include direct search for a positive test. Learning History is created automatically during Study Mode, letting users track their learning progress and allowing administrators to review activities in the system. These three companies fully meet the requirements for the various think tanks that use CRUD.
