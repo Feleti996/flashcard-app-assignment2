@@ -214,9 +214,13 @@ h1, .history-title, .page-title {
 .history-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;                     /* ⭐ gives breathing room */
   padding: 10px 0;
   border-bottom: 1px solid var(--pink);
+  flex-wrap: wrap;               /* ⭐ allows wrapping */
 }
+
 
 .history-row:last-child {
   border-bottom: none;
@@ -229,12 +233,17 @@ h1, .history-title, .page-title {
   font-size: 16px;
 }
 
-/* Values */
 .history-value {
   color: var(--coffee) !important;
   font-size: 16px;
   text-align: right;
+  word-break: break-word;        /* ⭐ forces long words to wrap */
+  overflow-wrap: break-word;     /* ⭐ modern wrapping */
+  white-space: normal;           /* ⭐ prevents overflow */
+  max-width: 100%;               /* ⭐ ensures it stays inside card */
 }
+
+
 
 /* ================================
    RESULT BADGES

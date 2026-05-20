@@ -380,3 +380,11 @@
   border-color: #F13030 !important;
   box-shadow: 0 0 12px rgba(241,48,48,0.55) !important;
 }
+textarea,
+input[type="text"] {
+  height: 60px !important;
+  min-height: 60px !important;
+  max-height: 200px;
+  overflow-y: auto;
+  resize: none;
+}

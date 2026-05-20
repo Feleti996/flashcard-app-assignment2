@@ -123,7 +123,7 @@ body.study {
    ================================ */
 
 .study-actions {
-  margin-top: 25px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -234,6 +234,7 @@ min-height: 480px !important;
   position: relative;
   perspective: 1000px;
   overflow: hidden;
+  margin-bottom: 120px;
 }
 
 /* Flip container */
@@ -430,4 +431,37 @@ min-height: 480px !important;
 .study-face.front h3,
 .study-face.front p {
   color: var(--coffee) !important;
+}
+.study-actions {
+  position: relative;
+  width: 380px;              /* same width as your card */
+  margin: 20px auto 0 auto;  /* center the whole row */
+  height: 0;                 /* collapse height so buttons float */
+}
+.study-btn.correct {
+  position: absolute;
+  left: -70px;
+  top: 10%;                     /* 🔥 moved up */
+  transform: translateY(-50%);
+}
+
+.study-btn.incorrect {
+  position: absolute;
+  right: -70px;
+  top: 40%;                     /* 🔥 moved up */
+  transform: translateY(-50%);
+}
+
+.study-actions {
+  display: flex;
+  justify-content: space-between;   /* pushes buttons apart */
+  width: 500px;                     /* 🔥 wider spacing */
+  margin: -20px auto 0 auto;        /* 🔥 moves buttons UP */
+  padding: 0 10px;                  /* small side padding */
+}
+.study-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: -500px auto 0 auto;   /* 🔥 moves buttons UP */
 }
