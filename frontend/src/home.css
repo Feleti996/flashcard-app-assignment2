@@ -78,34 +78,6 @@
     0 12px 24px rgba(0,0,0,0.28);
 }
 
-/* Hover warning popup */
-.home-btn::after {
-  content: "You are about to log in";
-  position: absolute;
-  top: -55px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--cherry);
-  color: var(--blush);
-  padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  z-index: 20;
-}
-
-.home-btn:hover::after {
-  opacity: 1;
-}
-
-.home-btn.secondary::after {
-  content: "Create a new account";
-}
-
 /* Feature cards section */
 .home-features {
   margin-top: 60px;
@@ -163,22 +135,24 @@
 .feature-card:hover p {
   color: var(--blush);
 }
-/* Remove inherited login popup from feature cards */
+
+/* Make sure feature cards never show button popups */
 .feature-card::after {
   content: "" !important;
   opacity: 0 !important;
 }
+
 /* ============================================
-   POPUP MESSAGES FOR THE TOP FOUR BUTTONS ONLY
+   POPUP SYSTEM — SINGLE SOURCE OF TRUTH
    ============================================ */
 
-/* Remove login popup from these four buttons */
-.home-buttons .home-btn::after {
-  opacity: 0 !important;
+/* Reset any old content */
+.home-btn::after {
+  content: "" !important;
 }
 
-/* Base popup style for the top buttons */
-.home-buttons .home-btn:hover::after {
+/* Base popup visuals */
+.home-btn::after {
   position: absolute;
   top: -55px;
   left: 50%;
@@ -189,28 +163,43 @@
   border-radius: 10px;
   font-size: 14px;
   white-space: nowrap;
-  opacity: 1 !important;
+  opacity: 0;
   pointer-events: none;
+  transition: 0.25s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   z-index: 50;
 }
 
-/* 1 — My Flashcards */
-.home-buttons .home-btn:nth-child(1)::after {
+.home-btn:hover::after {
+  opacity: 1;
+}
+
+/* LOGIN */
+.home-btn.primary::after {
+  content: "You are about to log in" !important;
+}
+
+/* CREATE ACCOUNT */
+.home-btn.secondary::after {
+  content: "Create a new account" !important;
+}
+
+/* FLASHCARDS */
+.home-btn[href="/flashcards"]::after {
   content: "Opening Flashcards..." !important;
 }
 
-/* 2 — Study Mode */
-.home-buttons .home-btn:nth-child(2)::after {
+/* STUDY MODE */
+.home-btn[href="/study"]::after {
   content: "Entering Study Mode..." !important;
 }
 
-/* 3 — Study History */
-.home-buttons .home-btn:nth-child(3)::after {
+/* STUDY HISTORY */
+.home-btn[href="/history"]::after {
   content: "Loading Study History..." !important;
 }
 
-/* 4 — Admin Dashboard */
-.home-buttons .home-btn:nth-child(4)::after {
+/* ADMIN DASHBOARD */
+.home-btn[href="/admin"]::after {
   content: "Opening Admin Dashboard..." !important;
 }

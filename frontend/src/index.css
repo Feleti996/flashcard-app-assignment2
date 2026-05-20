@@ -92,4 +92,13 @@ button {
   --back: var(--coffee);       /* #22181C */
   --card-bg: var(--blush);     /* #F6E8EA */
 }
+html, body {
+  overflow-y: visible !important;
+  overflow-x: visible !important;
+  height: auto !important;
+}
+#root, .app, .app-container, .page, .page-wrapper {
+  overflow: visible !important;
+  height: auto !important;
+}
 
