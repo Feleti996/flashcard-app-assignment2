@@ -16,14 +16,31 @@ function Flashcard({ card, onUpdate, onDelete }) {
     e.target.style.height = e.target.scrollHeight + "px";
   };
 
-  const saveEdit = () => {
-    onUpdate(card._id, {
-      question: editQuestion,
-      answer: editAnswer,
-      category: editCategory,
-    });
-    setEditing(false);
-  };
+const saveEdit = (e) => {
+  e.stopPropagation();
+
+  if (
+    editQuestion.trim().length === 0 ||
+    editAnswer.trim().length === 0 ||
+    editCategory.trim().length === 0
+  ) {
+    const btn = document.querySelector(".edit-btn");
+    if (btn) {
+      btn.classList.add("show-warning");
+      setTimeout(() => btn.classList.remove("show-warning"), 1500);
+    }
+    return; // <-- stays in edit mode
+  }
+
+  onUpdate(card._id, {
+    question: editQuestion,
+    answer: editAnswer,
+    category: editCategory,
+  });
+
+  setEditing(false); // only closes when valid
+};
+
 
   const cancelEdit = () => {
     setEditing(false);
@@ -57,9 +74,13 @@ function Flashcard({ card, onUpdate, onDelete }) {
             className="input-box auto-grow editing"
           />
 
-          <button className="btn btn-green" onClick={saveEdit}>
-            Save
-          </button>
+<button
+  type="button"
+className="btn btn-green edit-btn"
+  onClick={saveEdit}
+>
+  Save
+</button>
 
           <button className="btn btn-grey" onClick={cancelEdit}>
             Cancel

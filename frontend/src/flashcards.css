@@ -388,3 +388,111 @@ input[type="text"] {
   overflow-y: auto;
   resize: none;
 }
+/* Flashcard Save/Edit warning popup */
+.edit-btn.show-warning::after {
+  content: "All fields must be filled!";
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cinnabar);
+  color: var(--blush);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 1;
+  pointer-events: none;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 50;
+}
+.btn.btn-green {
+  position: relative;
+}
+/* ============================================
+   FLASHCARD SAVE BUTTON POPUP — FINAL FIX
+============================================ */
+
+/* Make the Save button a positioning anchor */
+.edit-btn {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 10;
+}
+
+/* Strong selector so nothing overrides it */
+.edit-btn.show-warning::after {
+  content: "All fields must be filled!";
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cinnabar);
+  color: var(--blush);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+/* Make Save button anchor the popup */
+.edit-btn {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 10;
+}
+
+/* Popup */
+.edit-btn.show-warning::after {
+  content: "All fields must be filled!";
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cinnabar);
+  color: var(--blush);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+/* Make Save button anchor the popup */
+.edit-btn {
+  position: relative !important;
+  overflow: visible !important;
+  z-index: 10;
+}
+
+/* Popup */
+.edit-btn.show-warning::after {
+  content: "All fields must be filled!";
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--cinnabar);
+  color: var(--blush);
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+/* Allow popups inside flashcards to be visible */
+.card {
+  overflow: visible !important;
+}
