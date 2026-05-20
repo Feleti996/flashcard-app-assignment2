@@ -352,3 +352,11 @@
   overflow-wrap: break-word !important;
   vertical-align: top;
 }
+
+.admin-search:hover {
+  background-color: #F13030 !important;
+}
+
+
+
+

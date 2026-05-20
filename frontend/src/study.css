@@ -438,12 +438,7 @@ min-height: 480px !important;
   margin: 20px auto 0 auto;  /* center the whole row */
   height: 0;                 /* collapse height so buttons float */
 }
-.study-btn.correct {
-  position: absolute;
-  left: -70px;
-  top: 10%;                     /* 🔥 moved up */
-  transform: translateY(-50%);
-}
+
 
 .study-btn.incorrect {
   position: absolute;
@@ -464,4 +459,63 @@ min-height: 480px !important;
   justify-content: space-between;
   width: 500px;
   margin: -500px auto 0 auto;   /* 🔥 moves buttons UP */
+}
+.study-btn {
+  padding: 10px 8px !important;
+  border-radius: 12px !important;
+  background: var(--accent) !important;
+  color: var(--bg) !important;
+  font-weight: 800 !important;
+  border: none !important;
+}
+/* Correct button */
+.study-btn.correct {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+  border-radius: 12px !important;
+  padding: 8px 8px !important;
+  font-weight: 800 !important;
+  transition: 0.25s ease !important;
+}
+
+/* Incorrect button */
+.study-btn.incorrect {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+  border-radius: 12px !important;
+  padding: 8px 8px !important;
+  font-weight: 800 !important;
+  transition: 0.25s ease !important;
+}
+
+/* Hover effects */
+.study-btn.correct:hover {
+  background: var(--cinnabar) !important; /* hover = cinnabar */  transform: scale(1.08);
+}
+
+.study-btn.incorrect:hover {
+  background: #ff4a4a !important;   /* lighter red */
+  transform: scale(1.08);
+}
+.study-card {
+  width: 380px;
+  height: 450px !important;     /* ⭐ fits on all screens */
+  min-height: 360px !important;
+  margin: 20px auto !important;
+  padding-top: 25px !important;
+}
+
+.study-card {
+  padding-top: -5px !important;   /* ⭐ pushes QUESTION down */
+}
+
+.study-card h3,
+.flashcard h3 {
+  margin-top: 100px !important;
+}
+.study-btn.correct {
+  position: absolute;
+  left: -70px;
+  top: 00%;                     /* 🔥 moved up */
+  transform: translateY(-50%);
 }

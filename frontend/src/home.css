@@ -163,4 +163,54 @@
 .feature-card:hover p {
   color: var(--blush);
 }
+/* Remove inherited login popup from feature cards */
+.feature-card::after {
+  content: "" !important;
+  opacity: 0 !important;
+}
+/* ============================================
+   POPUP MESSAGES FOR THE TOP FOUR BUTTONS ONLY
+   ============================================ */
 
+/* Remove login popup from these four buttons */
+.home-buttons .home-btn::after {
+  opacity: 0 !important;
+}
+
+/* Base popup style for the top buttons */
+.home-buttons .home-btn:hover::after {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--pink);
+  color: var(--blush);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 1 !important;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 50;
+}
+
+/* 1 — My Flashcards */
+.home-buttons .home-btn:nth-child(1)::after {
+  content: "Opening Flashcards..." !important;
+}
+
+/* 2 — Study Mode */
+.home-buttons .home-btn:nth-child(2)::after {
+  content: "Entering Study Mode..." !important;
+}
+
+/* 3 — Study History */
+.home-buttons .home-btn:nth-child(3)::after {
+  content: "Loading Study History..." !important;
+}
+
+/* 4 — Admin Dashboard */
+.home-buttons .home-btn:nth-child(4)::after {
+  content: "Opening Admin Dashboard..." !important;
+}
