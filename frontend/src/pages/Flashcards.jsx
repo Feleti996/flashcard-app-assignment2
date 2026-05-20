@@ -14,6 +14,7 @@ function Flashcards() {
   const { token } = useContext(AuthContext);   
   const [flashcards, setFlashcards] = useState([]);
   const [loading, setLoading] = useState(true);
+const [error, setError] = useState(null);
 const [searchTerm, setSearchTerm] = useState("");
 
 const loadFlashcards = async () => {
@@ -29,10 +30,12 @@ data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       console.warn("Unexpected backend response:", data);
       setFlashcards([]);
     }
-  } catch (err) {
-    console.error("Error loading flashcards:", err);
-    setFlashcards([]);
-  } finally {
+} catch (err) {
+  console.error("Error loading flashcards:", err);
+  setError("Error loading flashcards.");   // 🔵 INSERT HERE
+  setFlashcards([]);
+}
+ finally {
     setLoading(false);
   }
 };
@@ -40,6 +43,10 @@ data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 useEffect(() => {
   loadFlashcards();
 }, []);
+
+
+
+if (loading) return <p>Loading flashcards...</p>;
 
 
  const addCard = async (card) => {
@@ -80,7 +87,7 @@ setFlashcards((prev) => [newCard, ...prev]);
   return (
     <div className="flashcards-page">
       <h2>My Flashcards</h2>
-
+{error && <p className="flashcards-error">{error}</p>}
       <AddForm addCard={addCard} />
       <input
   type="text"
@@ -100,7 +107,6 @@ setFlashcards((prev) => [newCard, ...prev]);
 />
 
 
-      {loading && <p className="flashcards-empty">Loading flashcards...</p>}
 
       {!loading && flashcards.length === 0 && (
   <div className="empty-state">
