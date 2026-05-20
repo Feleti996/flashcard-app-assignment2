@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "6a0c09b9da589f1fc97fe08c"
+  },
+  "question": "What is cpu stand for in computer?",
+  "answer": "CPU stands for \"Central Processing Unit.\"",
+  "category": "Category: IT\n",
+  "createdBy": {
+    "$oid": "6a04085dd3fb7fde3c5675c0"
+  },
+  "createdAt": {
+    "$date": "2026-05-19T06:56:57.970Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-19T06:56:57.970Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a0c1c06c495a6ef4d94ae03"
+  },
+  "question": "dddd",
+  "answer": "dddd",
+  "category": "ddd",
+  "createdBy": {
+    "$oid": "6a04085dd3fb7fde3c5675c0"
+  },
+  "createdAt": {
+    "$date": "2026-05-19T08:15:02.133Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-19T08:15:02.133Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6a0c1c0ac495a6ef4d94ae05"
+  },
+  "question": "dd",
+  "answer": "ddd",
+  "category": "ddd",
+  "createdBy": {
+    "$oid": "6a04085dd3fb7fde3c5675c0"
+  },
+  "createdAt": {
+    "$date": "2026-05-19T08:15:06.603Z"
+  },
+  "updatedAt": {
+    "$date": "2026-05-19T08:15:06.603Z"
+  },
+  "__v": 0
+}]
