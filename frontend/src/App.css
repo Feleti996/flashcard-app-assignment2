@@ -194,3 +194,13 @@ body.dark .history-item {
 body.study {
   background: var(--coffee) !important;
 }
+button {
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
