@@ -12,17 +12,21 @@ The programme has loads of features to make learning more fun. You can create, e
 
 The project is built using a full set of modern JavaScript. The frontend uses React and the Context API to manage authentication, secure paths to control access, and Axios to talk to the API. The backend uses Express to handle RESTful routes, bcrypt to hash passwords, JWT for authentication, and Mongoose to work with MongoDB schemas. This setup makes for a modular, scalable, and easy-to-manage system where the frontend and backend work together smoothly, and the backend reliably handles data storage.
 
-## Folder Structure
+# Folder Structure
 
 ```text
-flashcard-app/
+FLASHCARD-APP/
 │
 ├── backend/
+│   │
 │   ├── controllers/
 │   │   ├── adminController.js
 │   │   ├── authController.js
 │   │   ├── flashcardController.js
 │   │   └── historyController.js
+│   │
+│   ├── database/
+│   │   └── flashcards_export.json
 │   │
 │   ├── middleware/
 │   │   ├── authMiddleware.js
@@ -44,14 +48,12 @@ flashcard-app/
 │   │
 │   ├── .env.example
 │   ├── makeAdmin.js
-│   ├── server.js
+│   ├── package-lock.json
 │   ├── package.json
-│   └── package-lock.json
-│
-├── database/
-│   └── flashcards_export.json
+│   └── server.js
 │
 ├── frontend/
+│   │
 │   ├── public/
 │   │   ├── favicon.ico
 │   │   ├── favicon.png
@@ -63,21 +65,10 @@ flashcard-app/
 │   │   └── robots.txt
 │   │
 │   ├── src/
+│   │   │
 │   │   ├── assets/
-│   │   │   ├── pen.png
-│   │   │   └── screenshots/
-│   │   │       ├── Admin-Dashboard.png
-│   │   │       ├── Admin-History.png
-│   │   │       ├── Dark-Mode.png
-│   │   │       ├── Flashcard-CRUD-Page.png
-│   │   │       ├── High-Contrast.png
-│   │   │       ├── Home-Page.png
-│   │   │       ├── Light-Mode.png
-│   │   │       ├── Login-page.png
-│   │   │       ├── Register-Page.png
-│   │   │       ├── Study-History-Page.png
-│   │   │       ├── Study-Mode.png
-│   │   │       └── User-Page.png
+│   │   │   ├── screenshots/
+│   │   │   └── pen.png
 │   │   │
 │   │   ├── components/
 │   │   │   ├── AddForm.js
@@ -105,21 +96,23 @@ flashcard-app/
 │   │   │   ├── flashcardService.js
 │   │   │   └── historyService.js
 │   │   │
-│   │   ├── App.js
+│   │   ├── admin.css
 │   │   ├── App.css
-│   │   ├── index.js
-│   │   ├── index.css
-│   │   ├── theme.css
-│   │   ├── flashcards.css
-│   │   ├── navbar.css
-│   │   ├── home.css
+│   │   ├── App.js
 │   │   ├── auth.css
-│   │   ├── study.css
+│   │   ├── flashcards.css
 │   │   ├── history.css
-│   │   └── logo.svg
+│   │   ├── home.css
+│   │   ├── index.css
+│   │   ├── index.js
+│   │   ├── logo.svg
+│   │   ├── navbar.css
+│   │   ├── study.css
+│   │   └── theme.css
 │   │
-│   ├── package.json
-│   └── package-lock.json
+│   ├── .gitignore
+│   ├── package-lock.json
+│   └── package.json
 │
 ├── .gitignore
 ├── package-lock.json
