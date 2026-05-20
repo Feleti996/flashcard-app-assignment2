@@ -1,8 +1,7 @@
 /* ================================
    STUDY MODE — THEME COMPATIBLE
-   ================================ */
+================================ */
 
-/* Body styling for Study Mode */
 body.study {
   background: var(--bg) !important;
   color: var(--text) !important;
@@ -12,281 +11,27 @@ body.study {
 /* Wrapper */
 .study-wrapper {
   width: 100%;
-  padding-top: 20px;
+  padding-top: 70px !important;
   text-align: center;
 }
 
 /* Title */
 .study-title {
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 38px !important;
+  font-weight: 900 !important;
   color: var(--accent) !important;
-  margin-bottom: 20px;
+  margin-bottom: 35px !important;
+  letter-spacing: 0.4px;
 }
 
 /* ================================
    PROGRESS BAR + TEXT
-   ================================ */
+================================ */
 
 .study-progress-box {
   margin-bottom: 25px;
 }
 
-.study-progress-text {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--accent) !important;
-}
-
-.study-progress-bar {
-  width: 80%;
-  max-width: 500px;
-  height: 14px;
-  background: var(--card);
-  border-radius: 10px;
-  margin: 15px auto 25px auto;
-  overflow: hidden;
-  border: 2px solid var(--accent);
-}
-
-.study-progress-fill {
-  height: 100%;
-  background: var(--accent);
-  width: 0%;
-  transition: width 0.4s ease;
-}
-/* ================================
-   PERFECT FLIP CARD SIZE + CENTER
-   ================================ */
-
-.study-card {
-  background: var(--card-bg) !important;
-  width: 360px;
-  height: 340px;              /* shorter card */
-  margin: 25px auto;
-  border-radius: 16px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-  cursor: pointer;
-  position: relative;
-  perspective: 1000px;
-  overflow: hidden;
-}
-
-/* Flip container */
-.study-inner {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-/* Flip animation */
-.study-card.flipped .study-inner {
-  transform: rotateY(180deg);
-}
-
-/* Card faces */
-.study-face {
-  position: absolute;
-  inset: 0;
-  padding: 24px;
-
-  display: flex;
-  flex-direction: column;
-
-  /* CENTER CONTENT */
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  box-sizing: border-box;
-  backface-visibility: hidden;
-  overflow-y: auto;
-}
-
-/* Front */
-.study-face.front {
-  background: var(--front) !important;
-  color: var(--text) !important;
-}
-
-/* Back */
-.study-face.back {
-  background: var(--back) !important;
-  color: var(--text) !important;
-  transform: rotateY(180deg);
-}
-
-
-/* ================================
-   BUTTONS
-   ================================ */
-
-.study-actions {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.study-btn {
-  padding: 14px 26px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.25s ease;
-  border: none;
-  background: var(--accent) !important;
-  color: var(--text) !important;
-}
-
-.study-btn:hover {
-  opacity: 0.85;
-  transform: scale(1.05);
-}
-
-/* ================================
-   SESSION COMPLETE
-   ================================ */
-
-.study-complete {
-  margin-top: 20px;
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--accent) !important;
-}
-.study-card {
-height: 480px !important;
-min-height: 480px !important;
-;
-}
-
-.study-inner {
-  height: 100% !important;
-  min-height: 100% !important;
-}
-.study-face {
-  height: 100% !important;
-  min-height: 100% !important;
-}
-.study-face {
-  overflow-y: auto !important;
-}
-/* ================================
-   FIX: CENTER + RESTORE FLIP
-   ================================ */
-
-/* Center the card */
-.study-card {
-  margin: 25px auto !important;
-  width: 380px;
-  height: 480px !important;
-  min-height: 480px !important;
-  position: relative;
-  perspective: 1000px;
-}
-
-/* Restore flip animation */
-.study-inner {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d !important;
-  transition: transform 0.6s ease !important;
-}
-
-/* When flipped */
-.study-card.flipped .study-inner {
-  transform: rotateY(180deg) !important;
-}
-
-/* Ensure faces fill the card */
-.study-face {
-  position: absolute;
-  inset: 0;
-  height: 100% !important;
-  min-height: 100% !important;
-  backface-visibility: hidden !important;
-  overflow-y: auto !important;
-}
-
-/* Front */
-.study-face.front {
-  transform: rotateY(0deg);
-}
-
-/* Back */
-.study-face.back {
-  transform: rotateY(180deg);
-}
-.study-face.front,
-.study-face.back {
-  color: var(--text) !important;
-}
-/* Card background behind flip */
-.study-card {
-  background: var(--card-bg) !important;
-  width: 380px;
-  height: 420px;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
-  cursor: pointer;
-  position: relative;
-  perspective: 1000px;
-  overflow: hidden;
-  margin-bottom: 120px;
-}
-
-/* Flip container */
-.study-inner {
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease;
-}
-
-/* Front face */
-.study-face.front {
-  background: var(--front) !important;
-  color: var(--text) !important;
-  backface-visibility: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/* Back face */
-.study-face.back {
-  background: var(--back) !important;
-  color: var(--text) !important;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-/* Flip when active */
-.study-card.flipped .study-inner {
-  transform: rotateY(180deg);
-}
-.study-card,
-.study-face.front,
-.study-face.back {
-  color: var(--text) !important;   /* your actual text variable */
-}
-
-/* ================================
-   PERFECTED FRONT PAGE — FINAL
-   ================================ */
-
-/* Wrapper spacing */
-.study-wrapper {
-  padding-top: 70px !important;
-  text-align: center;
-}
-
-/* "Studying X / Y" */
 .study-progress-text:first-of-type {
   font-size: 30px !important;
   font-weight: 900 !important;
@@ -294,7 +39,6 @@ min-height: 480px !important;
   margin-bottom: 8px !important;
 }
 
-/* "X cards remaining" */
 .study-progress-text:nth-of-type(2) {
   font-size: 20px !important;
   font-weight: 600 !important;
@@ -303,7 +47,6 @@ min-height: 480px !important;
   color: var(--accent) !important;
 }
 
-/* Progress bar */
 .study-progress-bar {
   width: 85% !important;
   max-width: 480px !important;
@@ -315,57 +58,85 @@ min-height: 480px !important;
   overflow: hidden;
 }
 
-/* Progress fill */
 .study-progress-fill {
   height: 100%;
   background: var(--accent);
   transition: width 0.4s ease;
 }
 
-/* "Study Mode" title */
-.study-title {
-  font-size: 38px !important;
-  font-weight: 900 !important;
-  color: var(--accent) !important;
-  margin-bottom: 35px !important;
-  letter-spacing: 0.4px;
-}
-
-/* Start button */
-.study-btn.start {
-  background: var(--accent) !important;
-  color: var(--bg) !important;
-  padding: 18px 48px !important;
-  font-size: 24px !important;
-  font-weight: 800 !important;
-  border-radius: 16px !important;
-  border: none;
-  cursor: pointer;
-  transition: 0.25s ease;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-}
-
-.study-btn.start:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-  opacity: 0.95;
-}
 /* ================================
-   PROFESSIONAL TEXT STYLING ONLY
-   ================================ */
+   FLIP CARD — FINAL MERGED VERSION
+================================ */
 
-/* Headings: "Question" / "Answer" */
+.study-card {
+  background: var(--card-bg) !important;
+  width: 380px;
+  height: 450px !important;
+  min-height: 360px !important;
+  margin: 20px auto !important;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden;
+  padding-top: 25px !important;
+}
+
+.study-inner {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d !important;
+  transition: transform 0.6s ease !important;
+}
+
+.study-card.flipped .study-inner {
+  transform: rotateY(180deg) !important;
+}
+
+.study-face {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  backface-visibility: hidden !important;
+  overflow-y: auto !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  color: var(--text) !important;
+}
+
+.study-face.front {
+  background: var(--front) !important;
+  transform: rotateY(0deg);
+}
+
+.study-face.back {
+  background: var(--back) !important;
+  transform: rotateY(180deg);
+}
+
+/* ================================
+   TEXT STYLING
+================================ */
+
 .study-face h3 {
   font-size: 28px !important;
   font-weight: 900 !important;
-  color: var(--accent) !important;
+  color: var(--text) !important;
   text-align: center !important;
   letter-spacing: 0.4px !important;
   margin-bottom: 14px !important;
   text-transform: uppercase;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-/* Main flashcard text */
 .study-face p {
   font-size: 21px !important;
   font-weight: 500 !important;
@@ -375,91 +146,33 @@ min-height: 480px !important;
   white-space: pre-wrap !important;
   text-align: left !important;
   letter-spacing: 0.2px;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
-/* Optional: subtle emphasis for long answers */
 .study-face p strong {
   font-weight: 700 !important;
   color: var(--accent) !important;
 }
 
-/* Optional: italic text refinement */
 .study-face p em {
   font-style: italic !important;
   opacity: 0.9;
 }
 
-/* Text selection highlight */
-.study-face p::selection,
-.study-face h3::selection {
-  background: var(--accent);
-  color: var(--bg);
-}
 /* ================================
-   FIX: HEADING ALWAYS VISIBLE
-   ================================ */
+   BUTTONS — FINAL MERGED VERSION
+================================ */
 
-.study-face h3 {
-  color: var(--text) !important;   /* Always visible */
-  opacity: 1 !important;
-  visibility: visible !important;
-  font-weight: 900 !important;
-}
-/* ================================
-   FINAL THEME-AWARE TEXT FIX
-   ================================ */
-
-.study-face.front,
-.study-face.back,
-.study-face h3,
-.study-face p {
-  color: var(--text) !important;
-}
-
-/* Ensure visibility */
-.study-face h3,
-.study-face p {
-  opacity: 1 !important;
-  visibility: visible !important;
-  position: relative;
-  z-index: 5;
-}
-/* ================================
-   DARK MODE QUESTION TEXT FIX
-   ================================ */
-
-.study-face.front h3,
-.study-face.front p {
-  color: var(--coffee) !important;
-}
-.study-actions {
-  position: relative;
-  width: 380px;              /* same width as your card */
-  margin: 20px auto 0 auto;  /* center the whole row */
-  height: 0;                 /* collapse height so buttons float */
-}
-
-
-.study-btn.incorrect {
-  position: absolute;
-  right: -70px;
-  top: 40%;                     /* 🔥 moved up */
-  transform: translateY(-50%);
-}
-
-.study-actions {
-  display: flex;
-  justify-content: space-between;   /* pushes buttons apart */
-  width: 500px;                     /* 🔥 wider spacing */
-  margin: -20px auto 0 auto;        /* 🔥 moves buttons UP */
-  padding: 0 10px;                  /* small side padding */
-}
 .study-actions {
   display: flex;
   justify-content: space-between;
   width: 500px;
-  margin: -500px auto 0 auto;   /* 🔥 moves buttons UP */
+  margin: -20px auto 0 auto;
+  padding: 0 10px;
+  position: relative;
 }
+
 .study-btn {
   padding: 10px 8px !important;
   border-radius: 12px !important;
@@ -467,55 +180,41 @@ min-height: 480px !important;
   color: var(--bg) !important;
   font-weight: 800 !important;
   border: none !important;
-}
-/* Correct button */
-.study-btn.correct {
-  background: var(--cinnabar) !important;
-  color: var(--blush) !important;
-  border-radius: 12px !important;
-  padding: 8px 8px !important;
-  font-weight: 800 !important;
+  cursor: pointer;
   transition: 0.25s ease !important;
 }
 
-/* Incorrect button */
+/* Correct */
+.study-btn.correct {
+  background: var(--cinnabar) !important;
+  color: var(--blush) !important;
+  padding: 8px 8px !important;
+}
+
+.study-btn.correct:hover {
+  background: var(--cinnabar) !important;
+  transform: scale(1.08);
+}
+
+/* Incorrect */
 .study-btn.incorrect {
   background: var(--cinnabar) !important;
   color: var(--blush) !important;
-  border-radius: 12px !important;
   padding: 8px 8px !important;
-  font-weight: 800 !important;
-  transition: 0.25s ease !important;
-}
-
-/* Hover effects */
-.study-btn.correct:hover {
-  background: var(--cinnabar) !important; /* hover = cinnabar */  transform: scale(1.08);
 }
 
 .study-btn.incorrect:hover {
-  background: #ff4a4a !important;   /* lighter red */
+  background: #ff4a4a !important;
   transform: scale(1.08);
 }
-.study-card {
-  width: 380px;
-  height: 450px !important;     /* ⭐ fits on all screens */
-  min-height: 360px !important;
-  margin: 20px auto !important;
-  padding-top: 25px !important;
-}
 
-.study-card {
-  padding-top: -5px !important;   /* ⭐ pushes QUESTION down */
-}
+/* ================================
+   SESSION COMPLETE
+================================ */
 
-.study-card h3,
-.flashcard h3 {
-  margin-top: 100px !important;
-}
-.study-btn.correct {
-  position: absolute;
-  left: -70px;
-  top: 00%;                     /* 🔥 moved up */
-  transform: translateY(-50%);
+.study-complete {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--accent) !important;
 }

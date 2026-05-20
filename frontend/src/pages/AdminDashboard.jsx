@@ -84,7 +84,6 @@ setHistory(
   );
 
 const filteredHistory = history.filter((h) => {
-  // ⭐ Show ALL history when search is empty
   if (!search.trim()) return true;
 
   const q = h.flashcardId?.question?.toLowerCase() || "";
@@ -95,6 +94,7 @@ const filteredHistory = history.filter((h) => {
 
   return q.includes(s) || a.includes(s) || u.includes(s);
 });
+
 
   const openUserDetails = (user) => {
   setSelectedUser(user);

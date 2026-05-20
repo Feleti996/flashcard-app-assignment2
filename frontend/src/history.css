@@ -38,110 +38,23 @@
   margin-top: 25px;
 }
 
-/* Individual history card */
-.history-card {
-  background: var(--cherry);
-  border: 3px solid var(--pink);
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-  text-align: left;
-  transition: 0.25s ease;
-}
+/* ================================
+   CLASSIC PREMIUM HISTORY CARD
+   ================================ */
 
-.history-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--cinnabar);
-}
-
-/* Row layout */
-.history-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-}
-
-.history-label {
-  font-weight: 700;
-  color: var(--pink);
-  font-size: 18px;
-}
-
-.history-value {
-  font-size: 18px;
-  color: var(--blush);
-}
-
-/* Result badge */
-.history-result {
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-transform: capitalize;
-  font-size: 18px;
-}
-
-.history-result.correct {
-  background: var(--pink);
-  color: var(--coffee);
-}
-
-.history-result.incorrect {
-  background: var(--cinnabar);
-  color: var(--blush);
-}
-h1, .history-title, .page-title {
-  color: var(--text) !important;
-}
-.history-card,
-.study-history-item,
-.history-item {
-  background: var(--blush) !important;     /* light + soft */
-  border: 2px solid var(--pink) !important;
-  color: var(--coffee) !important;
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-}
-.history-page {
-  background: var(--blush) !important;
-}
-.correct {
-  background: var(--pink) !important;
-  color: var(--coffee) !important;
-}
-
-.incorrect {
-  background: var(--cinnabar) !important;
-  color: var(--blush) !important;
-}
 .history-card,
 .study-history-item,
 .history-item {
   background: var(--blush) !important;
   border: 2px solid var(--pink) !important;
-  color: var(--coffee) !important;   /* ⭐ FIX: dark text */
-  padding: 18px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.10);
-}
-.history-card * ,
-.study-history-item * ,
-.history-item * {
-  color: var(--coffee) !important;   /* ⭐ force readable text */
-}
-.history-card,
-.study-history-item,
-.history-item {
-  background: var(--blush) !important;     /* soft + classic */
-  border: 2px solid var(--pink) !important;
-  border-radius: 16px;                     /* classic rounded frame */
+  border-radius: 16px;
   padding: 22px 26px;
   margin-bottom: 22px;
   color: var(--coffee) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* premium soft shadow */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: 0.25s ease;
 }
+
 .history-card:hover,
 .study-history-item:hover,
 .history-item:hover {
@@ -149,62 +62,20 @@ h1, .history-title, .page-title {
   box-shadow: 0 8px 18px rgba(0,0,0,0.22);
   border-color: var(--cinnabar) !important;
 }
+
+/* Force readable text inside cards */
+.history-card *,
+.study-history-item *,
+.history-item * {
+  color: var(--coffee) !important;
+}
+
+/* Inner card section */
 .history-card-inner {
   border: 1px solid var(--pink);
   padding: 16px 20px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.35); /* still blush-based */
-}
-.history-card strong,
-.study-history-item strong,
-.history-item strong {
-  color: var(--pink) !important;
-  font-size: 15px;
-  letter-spacing: 0.3px;
-}
-.history-card p,
-.study-history-item p,
-.history-item p {
-  margin: 6px 0;
-  font-size: 17px;
-  color: var(--coffee) !important;
-}
-.correct {
-  background: var(--pink) !important;
-  color: var(--coffee) !important;
-  padding: 5px 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.incorrect {
-  background: var(--cinnabar) !important;
-  color: var(--blush) !important;
-  padding: 5px 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  display: inline-block;
-}
-/* ================================
-   CLASSIC PREMIUM HISTORY CARD
-   ================================ */
-
-.history-card {
-  background: var(--blush) !important;        /* soft + clean */
-  border: 2px solid var(--pink) !important;   /* classic frame */
-  border-radius: 16px;                        /* elegant corners */
-  padding: 22px 26px;
-  margin-bottom: 22px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);    /* premium shadow */
-  transition: 0.25s ease;
-}
-
-/* Hover effect */
-.history-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.22);
-  border-color: var(--cinnabar) !important;
+  background: rgba(255,255,255,0.35);
 }
 
 /* ================================
@@ -215,12 +86,11 @@ h1, .history-title, .page-title {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 12px;                     /* ⭐ gives breathing room */
+  gap: 12px;
   padding: 10px 0;
   border-bottom: 1px solid var(--pink);
-  flex-wrap: wrap;               /* ⭐ allows wrapping */
+  flex-wrap: wrap;
 }
-
 
 .history-row:last-child {
   border-bottom: none;
@@ -233,17 +103,16 @@ h1, .history-title, .page-title {
   font-size: 16px;
 }
 
+/* Values */
 .history-value {
   color: var(--coffee) !important;
   font-size: 16px;
   text-align: right;
-  word-break: break-word;        /* ⭐ forces long words to wrap */
-  overflow-wrap: break-word;     /* ⭐ modern wrapping */
-  white-space: normal;           /* ⭐ prevents overflow */
-  max-width: 100%;               /* ⭐ ensures it stays inside card */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 100%;
 }
-
-
 
 /* ================================
    RESULT BADGES
@@ -255,6 +124,7 @@ h1, .history-title, .page-title {
   padding: 4px 12px;
   border-radius: 8px;
   font-weight: bold;
+  display: inline-block;
 }
 
 .incorrect {
@@ -263,5 +133,16 @@ h1, .history-title, .page-title {
   padding: 4px 12px;
   border-radius: 8px;
   font-weight: bold;
+  display: inline-block;
+}
+
+/* Page background */
+.history-page {
+  background: var(--blush) !important;
+}
+
+/* Title override */
+h1, .history-title, .page-title {
+  color: var(--text) !important;
 }
 

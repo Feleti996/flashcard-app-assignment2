@@ -66,7 +66,7 @@
     0 8px 18px rgba(0,0,0,0.22);
 }
 
-/* Hover effect (navbar colour) */
+/* Hover effect */
 .home-btn.primary:hover,
 .home-btn.secondary:hover {
   background: var(--cherry);
@@ -78,7 +78,10 @@
     0 12px 24px rgba(0,0,0,0.28);
 }
 
-/* Feature cards section */
+/* ================================
+   FEATURE CARDS
+   ================================ */
+
 .home-features {
   margin-top: 60px;
   width: 100%;
@@ -88,7 +91,6 @@
   gap: 50px;
 }
 
-/* TRIPLE FRAME matching navbar colours */
 .feature-card {
   background: var(--blush);
   border-radius: 20px;
@@ -105,21 +107,18 @@
   backdrop-filter: blur(4px);
 }
 
-/* Feature title */
 .feature-card h3 {
   color: var(--coffee);
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-/* Feature text */
 .feature-card p {
   color: var(--coffee);
   opacity: 0.85;
   line-height: 1.5;
 }
 
-/* Hover effect (navbar colour + visible text) */
 .feature-card:hover {
   background: var(--cherry);
   color: var(--blush);
@@ -136,23 +135,19 @@
   color: var(--blush);
 }
 
-/* Make sure feature cards never show button popups */
+/* Prevent popups inside feature cards */
 .feature-card::after {
   content: "" !important;
   opacity: 0 !important;
 }
 
-/* ============================================
-   POPUP SYSTEM — SINGLE SOURCE OF TRUTH
-   ============================================ */
-
-/* Reset any old content */
-.home-btn::after {
-  content: "" !important;
-}
+/* ================================
+   POPUP SYSTEM — CLEANED
+   ================================ */
 
 /* Base popup visuals */
 .home-btn::after {
+  content: "" !important;
   position: absolute;
   top: -55px;
   left: 50%;
@@ -203,3 +198,4 @@
 .home-btn[href="/admin"]::after {
   content: "Opening Admin Dashboard..." !important;
 }
+

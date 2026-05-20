@@ -72,7 +72,6 @@
 
 .auth-container {
   width: 360px;
-  background: var(--cherry);
   padding: 32px 28px;
   border-radius: 14px;
   border: 3px solid var(--pink);
@@ -91,8 +90,8 @@
   margin-bottom: 20px;
   font-size: 1.9rem;
   font-weight: 800;
-  color: var(--blush);
   letter-spacing: 1px;
+  color: var(--blush);
 }
 
 .auth-container input {
@@ -139,8 +138,6 @@
 }
 
 .error {
-  background: var(--cinnabar);
-  color: var(--blush);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 12px;
@@ -149,26 +146,9 @@
   text-align: center;
 }
 
-.auth-switch {
-  margin-top: 18px;
-  font-size: 15px;
-  color: var(--blush);
-}
-
-.auth-switch a {
-  color: var(--pink);
-  font-weight: bold;
-  text-decoration: underline;
-  transition: 0.25s ease;
-}
-
-.auth-switch a:hover {
-  color: var(--cinnabar);
-}
-
-/* ============================================================
+/* ================================
    PREMIUM LOGIN & REGISTER BOX
-============================================================ */
+   ================================ */
 
 .login-page > .auth-container {
   background: rgba(90, 0, 1, 0.75) !important;
@@ -179,6 +159,11 @@
   padding: 40px 34px !important;
   transition: 0.25s ease !important;
   color: var(--blush) !important;
+
+  /* Lighter override merged */
+  background-color: #F6E8EA !important;
+  color: #22181C !important;
+  border: 2px solid #F45B69 !important;
 }
 
 .login-page > .auth-container:hover {
@@ -216,7 +201,6 @@
   border-radius: 14px !important;
   padding: 16px !important;
   font-size: 1.15rem !important;
-  transition: 0.25s ease !important;
 }
 
 .login-page > .auth-container button:hover {
@@ -224,6 +208,10 @@
   background: var(--cinnabar) !important;
   color: var(--blush) !important;
   box-shadow: 0 6px 16px rgba(241,48,48,0.45) !important;
+}
+
+.login-page > .auth-container h2 {
+  color: #22181C !important;
 }
 
 .login-page > .auth-container > p {
@@ -237,27 +225,14 @@
   text-shadow: 0 0 4px var(--pink);
 }
 
-/* Lighter background override */
-.login-page > .auth-container {
-  background-color: #F6E8EA !important;
+/* Flashcards page — search bar fix */
+.flashcards-page input[type="search"] {
+  background: #FFFFFF !important;
   color: #22181C !important;
   border: 2px solid #F45B69 !important;
-}
-/* Fix heading text visibility */
-.login-page > .auth-container h2 {
-  color: #22181C !important; /* coffee text for contrast */
-}
-/* Flashcards page — make search bar visible */
-.flashcards-page input[type="search"] {
-  background: #FFFFFF !important;      /* clean white */
-  color: #22181C !important;           /* coffee text */
-  border: 2px solid #F45B69 !important; /* pink border */
   border-radius: 10px !important;
 }
 
-.flashcards-page input[type="search"]::placeholder {
-  color: #5A0001 !important; /* cherry */
-  opacity: 0.9 !important;
-}
+
 
 

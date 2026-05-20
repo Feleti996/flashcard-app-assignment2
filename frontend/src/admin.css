@@ -34,23 +34,17 @@
 .admin-stats .stat-card {
   width: 220px;
   height: 120px;
-
   background: var(--blush) !important;
   border: 2px solid var(--pink) !important;
   border-radius: 18px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
-
   padding: 20px;
   box-sizing: border-box;
-
   color: var(--coffee) !important;
-
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   transition: 0.25s ease;
 }
@@ -124,8 +118,12 @@
   outline: none;
 }
 
+.admin-search:hover {
+  background-color: #F13030 !important;
+}
+
 /* ================================
-   TABLES — EXCEL LOOK
+   TABLES — MERGED CLEAN VERSION
    ================================ */
 
 .admin-table-container {
@@ -134,27 +132,28 @@
 
 .admin-table {
   width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
   background: white;
   border: 1px solid #d0d0d0;
-  border-radius: 0;
-  box-shadow: none;
 }
 
-.admin-table th {
-  background: #f2f2f2;
-  color: var(--coffee);
-  padding: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  border: 1px solid #c8c8c8;
-}
-
+.admin-table th,
 .admin-table td {
   padding: 10px;
   border: 1px solid #e0e0e0;
   color: var(--coffee);
-  background: white;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  vertical-align: top;
+}
+
+.admin-table th {
+  background: #f2f2f2;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid #c8c8c8;
 }
 
 .admin-table tr:nth-child(even) td {
@@ -246,7 +245,6 @@
     transform: scale(0.85);
     opacity: 0;
   }
-
   to {
     transform: scale(1);
     opacity: 1;
@@ -341,21 +339,7 @@
   margin: 0 auto;
   padding: 20px;
 }
-.admin-table {
-  table-layout: fixed;        /* ⭐ prevents table from stretching */
-  width: 100%;                /* ⭐ keeps it inside the container */
-}
-.admin-table td,
-.admin-table th {
-  white-space: normal !important;      /* ⭐ allow wrapping */
-  word-break: break-word !important;   /* ⭐ break long words */
-  overflow-wrap: break-word !important;
-  vertical-align: top;
-}
 
-.admin-search:hover {
-  background-color: #F13030 !important;
-}
 
 
 
