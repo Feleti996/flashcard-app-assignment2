@@ -388,4 +388,35 @@ input[type="text"] {
   color: var(--blush);
   transform: translateY(-2px);
 }
+@media (max-width: 700px) {
 
+  .flashcards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .study-card {
+    width: 92%;
+    height: auto !important;
+    min-height: 380px !important;
+  }
+
+  .study-actions {
+    width: 95%;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .add-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add-box .input-box {
+    width: 95%;
+  }
+
+  .add-btn {
+    width: 95%;
+  }
+}
