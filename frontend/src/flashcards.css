@@ -39,7 +39,7 @@
   transition: 0.25s ease;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  overflow: visible !important; /* allow popups */
+  overflow: visible !important;
 }
 
 .flashcard:hover {
@@ -214,7 +214,7 @@
 }
 
 /* ================================
-   SEARCH BAR (merged)
+   SEARCH BAR
    ================================ */
 
 .search-input {
@@ -287,7 +287,7 @@ input[type="text"] {
 }
 
 /* ================================
-   SAVE BUTTON WARNING POPUP (merged)
+   SAVE BUTTON WARNING POPUP
    ================================ */
 
 .edit-btn {
@@ -319,5 +319,73 @@ input[type="text"] {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   ADD FORM CONTAINER
+   ================================ */
+
+.add-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+
+  margin-bottom: 30px;
+  padding: 20px;
+
+  background: var(--blush);
+  border: 2px solid var(--pink);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* INPUT FIELDS */
+.add-box .input-box {
+  width: 260px;
+  padding: 12px;
+  border-radius: 10px;
+
+  background: var(--coffee);
+  color: var(--blush);
+
+  border: 2px solid var(--pink);
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.add-box .input-box::placeholder {
+  color: var(--blush);
+  opacity: 0.7;
+}
+
+.add-box .input-box:focus {
+  outline: none;
+  border-color: var(--cinnabar);
+  background: var(--cherry);
+  color: var(--blush);
+}
+
+/* ADD BUTTON */
+.add-btn {
+  padding: 16px 32px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 22px;
+  font-weight: 800;
+
+  background: var(--pink);
+  color: var(--coffee);
+
+  transition: 0.25s ease;
+  height: fit-content;
+}
+
+.add-btn:hover {
+  background: var(--cinnabar);
+  color: var(--blush);
+  transform: translateY(-2px);
 }
 
