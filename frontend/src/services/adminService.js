@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/admin";
+const API_URL = "http://172.20.10.4:5000/api/admin";
 
 // GET all users
 export const getAllUsers = async (token) => {

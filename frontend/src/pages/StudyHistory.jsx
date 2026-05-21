@@ -72,7 +72,7 @@ data.sort((a, b) => new Date(b.studiedAt) - new Date(a.studiedAt));
               <span className="history-label">Date:</span>
               <span className="history-value">
 {new Date(item.studiedAt).toLocaleString()}
-}
+
               </span>
             </div>
 
