@@ -222,7 +222,7 @@ This work was personally completed by Alfred David Teaupa. The same student carr
 
 # Developer
 
-Developed by Alfred David Teaupa — Student ID 11502770,  
+**Developed by**- Alfred David Teaupa             **Student ID**- 11502770,  
 University of Technology Sydney,  
-for Assignment 2: Advanced Website Based on Modern Frontend Libraries.
+**for Assignment 2:** Advanced Website Based on Modern Frontend Libraries.
 
