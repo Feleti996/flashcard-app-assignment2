@@ -190,6 +190,9 @@ A sample of the dataset is included in the backend directory in database/flashca
 ```bash
 cd backend
 npm install
+Create a .env file inside the backend folder and add:
+MONGO_URI=mongodb://127.0.0.1:27017/flashcards2
+JWT_SECRET=your_jwt_secret_here
 npm start
 ```
 
