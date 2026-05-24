@@ -215,7 +215,7 @@ const filteredHistory = history.filter((h) => {
           <td>{c.category}</td>
           <td>{c.createdBy?.email || "Unknown"}</td>
 
-          {/* ⭐ EDIT BUTTON FIX */}
+          {/*EDIT BUTTON FIX */}
           <td>
             <button
               className="edit-btn"
@@ -233,13 +233,13 @@ const filteredHistory = history.filter((h) => {
                   return;
                 }
 
-                // ⭐ Prevent undefined fields
+                
                 const updated = {
                   question: newQuestion.trim() || c.question,
                   answer: newAnswer.trim() || c.answer,
                   category: newCategory.trim() || c.category,
 
-                  // ⭐ Preserve createdBy so Flashcards page doesn't crash
+                  
                   createdBy: c.createdBy?._id || c.createdBy || null
                 };
 
