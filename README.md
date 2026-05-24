@@ -1,11 +1,11 @@
 README.md
 
-### Individual Submissio ### 
+### Individual Submission
 
 # Flashcard Learning App — FullStack SPA with Authentication, Admin Dashboard & Study History
 
 ## Video Demonstration 
-### Watch the demonstration here:###
+### Watch the demonstration here:-
 
 <p align="center">
   <img src="./frontend/src/assets/screenshots/animation.gif" alt="Flashcard App Demo" width="850"/>
