@@ -1,10 +1,10 @@
-README.md
+README.md **“Individual Submission”** 
 
 # Flashcard Learning App — FullStack SPA with Authentication, Admin Dashboard & Study History
+
 <p align="center">
   <img src="./frontend/src/assets/screenshots/animation.gif" alt="Flashcard App Demo" width="850"/>
 </p>
-
 
 The Flashcard Learning App is a thorough learning app designed to give students a fast, clean, and personalised way to learn with digital cards. It works as a proper Single Page Application (SPA), making sure all actions happen without reloading the page, including logging in, managing flashcards, switching learning modes, and tracking history. The system combines a React frontend with a Node.js and Express backend, supported by a MongoDB database, and includes JWT security, access control, and a full admin dashboard. The app provides responsive interactions, lots of themes, 3D flip animation, and a structured learning process that keeps track of user progress.
 
@@ -216,13 +216,13 @@ JWT_SECRET=your_secret_key
 
 Future improvements could include using a spaced-repetition algorithm to boost learning success, adding shuffle and progress tracking, creating user-specific decks and categories, expanding Study Mode with timers and scores, moving the database to the cloud for better scalability, and adding search and testing features. Other planned updates include password and forgotten email recovery, multiplayer training sessions, and making it mobile-friendly to make learning even better and improve the platform's features.
 
-# Workload Allocation
+# Workload Allocation - Solo Project 
 
 This work was personally completed by Alfred David Teaupa. The same student carried out all backend development, frontend implementation, UI design, CRUD functionality, authentication system, admin dashboard, database integration, testing, and documentation.
 
 # Developer
 
-**Developed by**- Alfred David Teaupa             **Student ID**- 11502770,  
+**Developed by** - Alfred David Teaupa             **Student ID** - 11502770,  
 University of Technology Sydney,  
-**for Assignment 2:** Advanced Website Based on Modern Frontend Libraries.
+**For Assignment 2:** Advanced Website Based on Modern Frontend Libraries.
 
