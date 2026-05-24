@@ -195,9 +195,11 @@ A sample of the dataset is included in the backend directory in database/flashca
 ```bash
 cd backend
 npm install
+
 Create a .env file inside the backend folder and add:
 MONGO_URI=mongodb://127.0.0.1:27017/flashcards2
 JWT_SECRET=your_jwt_secret_here
+
 npm start
 ```
 
@@ -230,7 +232,11 @@ This work was personally completed by Alfred David Teaupa. The same student carr
 
 # Developer
 
-**Developed by** - Alfred David Teaupa             **Student ID** - 11502770,  
-University of Technology Sydney,  
+**Developed by** - Alfred David Teaupa
+
+**Student ID** - 11502770
+
+**University of Technology Sydney**
+  
 **For Assignment 2:** Advanced Website Based on Modern Frontend Libraries.
 
