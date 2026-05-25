@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import StudyHistory from "../models/StudyHistory.js";
 
-const MONGO_URI = "mongodb://localhost:27017/flashcard-app"; // update if needed
+const MONGO_URI = process.env.MONGO_URI;
 
 async function cleanup() {
   try {
