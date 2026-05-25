@@ -149,13 +149,16 @@ const filteredHistory = history.filter((h) => {
 
 
       {/* Search */}
-      <input
-        type="text"
-        className="admin-search"
-        placeholder="Search..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-      />
+     <input
+  id="admin-search"
+  name="adminSearch"
+  type="text"
+  className="admin-search"
+  placeholder="Search..."
+  value={search}
+  onChange={(e) => setSearch(e.target.value)}
+/>
+
 
       {/* Tables */}
       <div className="admin-table-container">
