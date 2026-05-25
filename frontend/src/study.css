@@ -290,3 +290,9 @@ body.study {
     padding: 12px 16px !important;
   }
 }
+/* FIX: Dark mode flip-card text */
+.theme2 .study-face,
+.theme2 .study-face h3,
+.theme2 .study-face p {
+  color: var(--coffee) !important;
+}
