@@ -25,11 +25,14 @@ const Navbar = () => {
           </>
         )}
       </div>
-         <select
-      value={theme}
-      onChange={(e) => setTheme(e.target.value)}
-      className="theme-selector"
-    >
+    <select
+  id="theme-selector"
+  name="theme"
+  value={theme}
+  onChange={(e) => setTheme(e.target.value)}
+  className="theme-selector"
+>
+
       <option value="theme1">Light Mode</option>
       <option value="theme2">Dark Mode</option>
       <option value="theme3">High Contrast</option>
